@@ -1,0 +1,34 @@
+.demo-grid{
+  width: 100%;
+  height: 100%;
+  
+}
+
+.mat-grid-tile{
+  border: 1px solid #cccccc !important;
+}
+
+.container-item{
+  width: 100%;
+  height:250px;
+  
+  padding: 8px;
+  .title{
+    font-size: 1.25em;
+    color: #aaaaaa;
+  }
+  .website{
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    color:#4b4b4b;
+    mat-icon{
+      padding-right:8px;
+    }
+    span{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<div fxLayout="row" layout-padding fxLayoutAlign="center center">
+  
+  <!-- [static-data]="getStaticData()" -->
+  <o-grid #grid attr="grid" class="demo-grid" entity="EDemo" columns="id;name;username;email;companyname"
+    keys="id" [cols]="4" query-rows="8" show-page-size="false" query-on-init="yes"
+    orderable="true" controls="no" refresh-button="false" pagination-controls="false">
+    <o-grid-item *ngFor="let list of grid.dataArray" onClick="onGridItemClicked()">
+      <o-column layout-padding class="container-item">
+        <img [src]="list.icon" style="margin-top:8px">
+        <h4 class="title">{{ list.name }}</h4>
+        <div class="website">
+          <mat-icon>website</mat-icon> <span> {{ list.url }} </span>
+        </div>
+        <o-button >
+          <mat-icon>play</mat-icon>
+        </o-button>
+        <div class="body">
+          {{list.description}}
+        </div>
+      </o-column>
+    </o-grid-item>
+  </o-grid>
+
+
+
+
+    
+</div>
