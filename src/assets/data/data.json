@@ -5,42 +5,65 @@
     {
       "id": "quickstart",
       "name": "Quickstart",
-      "description": "Ola k ase",
+      "description": "Quickstart",
       "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
-      "url": "https://try.imatia.com/ontimizeweb/quickstart/"
-    },{
+      "url": "https://try.imatia.com/ontimizeweb/quickstart/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
+      "version": 3
+    },
+    {
       "id": "quickstart-mobile",
       "name": "Quickstart mobile",
-      "description": "Ola k ase",
+      "description": "Quickstart mobile",
       "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
-      "url": "https://try.imatia.com/ontimizeweb/quickstartmobile/"
+      "url": "https://try.imatia.com/ontimizeweb/quickstartmobile/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart-mobile",
+      "version": 3
     },
     {
       "id": "playground",
       "name": "Playground",
-      "description": "Ola k ase",
+      "description": "Playground",
       "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
-      "url": "https://try.imatia.com/ontimizeweb/playground/"
+      "url": "https://try.imatia.com/ontimizeweb/playground/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
+      "version": 3
     },
     {
       "id": "charts",
       "name": "Charts quickstart",
-      "description": "Ola k ase",
+      "description": "Charts quickstart",
       "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
-      "url": "https://try.imatia.com/ontimizeweb/charts/"
+      "url": "https://try.imatia.com/ontimizeweb/charts/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
+      "version": 3
     },
     {
       "id": "map",
       "name": "Map quickstart",
-      "description": "Ola k ase",
+      "description": "Map quickstart",
       "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
-      "url": "https://try.imatia.com/ontimizeweb/map/"
-    }, {
+      "url": "https://try.imatia.com/ontimizeweb/map/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
+      "version": 3
+    },
+    {
       "id": "dynamicform",
       "name": "Dynamic Form",
-      "description": "Ola k ase",
+      "description": "Dynamic Form example",
       "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
-      "url": "https://try.imatia.com/ontimizeweb/dynamicform/"
+      "url": "https://try.imatia.com/ontimizeweb/dynamicform/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-dynamicform-example",
+      "version": 3
+    },
+    {
+      "id": "quickstart",
+      "name": "Quickstart",
+      "description": "Quickstart",
+      "icon": "http://www.ontimize.com/wp-content/uploads/2015/01/logo60.png",
+      "url": "https://try.imatia.com/ontimizeweb/quickstart/",
+      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
+      "version": 4
     }
   ]
 }
