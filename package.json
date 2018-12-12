@@ -5,9 +5,9 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4301",
+    "start": "ng serve --port 4000",
     "production": "ng build --aot=false --target -prod",
-    "production-aot": "ontimize-web-ngx production-aot --project-name ontimize-web-ngx-demos --href /ontimize-web-ngx-demos/"
+    "production-aot": "ontimize-web-ngx production-aot --project-name ontimize-web-ngx-demos --href /ontimizeweb/"
   },
   "private": true,
   "dependencies": {
