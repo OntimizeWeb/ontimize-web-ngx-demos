@@ -1,0 +1,58 @@
+.o-app {
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+
+  .o-app-grid {
+    background-image: url('/assets/images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: auto;
+
+    .o-app-grid-item {
+      width: 236px;
+      height: 164px;
+      // border: 2px solid #ffcc00;
+      border: 2px solid #203e45;
+      background: #ffffff;
+      border-radius: 5px;
+      margin: 8px;
+
+      .o-app-grid-item-image {
+        // width: 100%;
+        // height: auto;
+        width: 200px;
+        height: 114px;
+        min-width: 205px;
+        margin: 14px 15px 0 14px;
+      }
+
+      .o-app-grid-item-bottom {
+        position: relative;
+
+        .o-app-grid-item-buttons {
+          position: absolute;
+          right: 4px;
+          bottom: 4px;
+
+          .mat-icon-button {
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+
+            .mat-icon {
+              width: 22px;
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@ export const CONFIG: Config = {
   uuid: 'com.ontimize.web.ngx.demos.home',
 
   // Title of the app
-  title: 'Ontimize Web NGX Demos',
+  title: 'OntimizeWeb',
 
   //  Language of the application.
   locale: 'en',

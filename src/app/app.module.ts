@@ -1,26 +1,16 @@
 import { NgModule } from '@angular/core';
+import { APP_CONFIG, ONTIMIZE_MODULES, ONTIMIZE_PROVIDERS, OntimizeWebModule } from 'ontimize-web-ngx';
 
-import {
-  APP_CONFIG,
-  ONTIMIZE_MODULES,
-  ONTIMIZE_PROVIDERS,
-  OntimizeWebModule
-} from 'ontimize-web-ngx';
-
-import { CONFIG } from './app.config';
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CONFIG } from './app.config';
 
-// Standard providers...
-// Defining custom providers (if needed)...
-export const customProviders: any = [
-];
 
 @NgModule({
   imports: [
+    AppRoutingModule,
     ONTIMIZE_MODULES,
-    OntimizeWebModule,
-    AppRoutingModule
+    OntimizeWebModule
   ],
   declarations: [
     AppComponent
@@ -30,8 +20,7 @@ export const customProviders: any = [
   ],
   providers: [
     { provide: APP_CONFIG, useValue: CONFIG },
-    ...ONTIMIZE_PROVIDERS,
-    ...customProviders
+    ...ONTIMIZE_PROVIDERS
   ],
 })
 export class AppModule { }

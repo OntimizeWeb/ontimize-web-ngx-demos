@@ -1,14 +1,10 @@
-import { NgModule, NgModuleFactory } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { MainModule } from './main/main.module';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-export function loadMainModule() {
-  return MainModule;
-}
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-  { path: 'main', loadChildren: loadMainModule },
-  { path: '', redirectTo: 'main', pathMatch: 'full' }
+  { path: '', component: AppComponent }
 ];
 
 const opt = {
