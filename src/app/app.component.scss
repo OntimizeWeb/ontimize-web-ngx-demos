@@ -1,12 +1,13 @@
 .o-app {
   height: 100%;
+  display: flex;
   overflow: hidden;
   flex-direction: column;
 
   .o-app-grid {
     background-image: url('/assets/images/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: round;
+    height: 100%;
     display: flex;
     flex: 1 1 100%;
     flex-direction: row;
@@ -18,15 +19,12 @@
     .o-app-grid-item {
       width: 236px;
       height: 164px;
-      // border: 2px solid #ffcc00;
-      border: 2px solid #203e45;
       background: #ffffff;
       border-radius: 5px;
       margin: 8px;
+      cursor: pointer;
 
       .o-app-grid-item-image {
-        // width: 100%;
-        // height: auto;
         width: 200px;
         height: 114px;
         min-width: 205px;

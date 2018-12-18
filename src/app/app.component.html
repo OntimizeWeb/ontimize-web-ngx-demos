@@ -1,4 +1,3 @@
-<!-- <div fxLayout="column" fxLayoutAlign="start stretch" fxFill> -->
 <mat-toolbar color="primary" class="mat-elevation-z6">
   <div fxFlex></div>
   <button mat-button [matMenuTriggerFor]="versionPicker">
@@ -9,30 +8,21 @@
     <button mat-menu-item *ngFor="let version of ontimizeVersions" (click)="onVersionChanged(version)">{{ version.title
       }}</button>
   </mat-menu>
-
   <a mat-button href="https://github.com/OntimizeWeb/ontimize-web-ngx" aria-label="GitHub Repository" target="_blank">
     <mat-icon svgIcon="ontimize:github"></mat-icon>&nbsp;GitHub
   </a>
 </mat-toolbar>
 <div class="o-app-grid">
-
-  <div *ngFor="let item of grid.dataArray" fxLayout="column" fxLayoutAlign="center stretch" class="o-app-grid-item">
+  <div *ngFor="let item of dataArray" fxLayout="column" fxLayoutAlign="center stretch" (click)="openTab(item.url)"
+    class="o-app-grid-item mat-elevation-z8">
     <img [src]="'/assets/images/'+item.icon" class="o-app-grid-item-image" />
     <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex>
       <span fxflex>{{ item.description }}</span>
       <div fxLayout="column" class="o-app-grid-item-buttons">
-        <button type="button" mat-icon-button color="accent" (click)="openTab(item.github)">
+        <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)">
           <mat-icon svgIcon="ontimize:github"></mat-icon>
-        </button>
-        <button type="button" mat-icon-button color="accent" (click)="openTab(item.url)">
-          <mat-icon>open_in_new</mat-icon>
         </button>
       </div>
     </div>
   </div>
-
 </div>
-
-<o-grid #grid fxFlex attr="grid" class="demo-grid" entity="EDemo" columns="id;name;description;icon;url;github;version"
-  keys="id" cols="4" query-rows="8" show-page-size="false" query-on-init="no" orderable="no" controls="no"
-  refresh-button="false" pagination-controls="false" detail-mode="none" grid-item-height="1:0.75" style="display:none"></o-grid>

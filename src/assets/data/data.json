@@ -1,78 +1,74 @@
-{
-  "code": 0,
-  "message": "",
-  "data": [
-    {
-      "id": "quickstart",
-      "name": "Quickstart",
-      "description": "Quickstart",
-      "icon": "quickstart.svg",
-      "url": "https://try.imatia.com/ontimizeweb/quickstart/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
-      "version": 3
-    },
-    {
-      "id": "quickstart-mobile",
-      "name": "Quickstart mobile",
-      "description": "Quickstart mobile",
-      "icon": "quickstartmobile.svg",
-      "url": "https://try.imatia.com/ontimizeweb/quickstartmobile/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart-mobile",
-      "version": 3
-    },
-    {
-      "id": "playground",
-      "name": "Playground",
-      "description": "Playground",
-      "icon": "playground.svg",
-      "url": "https://try.imatia.com/ontimizeweb/playground/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
-      "version": 3
-    },
-    {
-      "id": "charts",
-      "name": "Charts",
-      "description": "Charts",
-      "icon": "charts.svg",
-      "url": "https://try.imatia.com/ontimizeweb/charts/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
-      "version": 3
-    },
-    {
-      "id": "map",
-      "name": "Map",
-      "description": "Map",
-      "icon": "map.svg",
-      "url": "https://try.imatia.com/ontimizeweb/map/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
-      "version": 3
-    },
-    {
-      "id": "dynamicform",
-      "name": "Dynamic Forms",
-      "description": "Dynamic Forms",
-      "icon": "dynamicform.svg",
-      "url": "https://try.imatia.com/ontimizeweb/dynamicform/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-dynamicform-example",
-      "version": 3
-    },
-    {
-      "id": "tree",
-      "name": "Tree",
-      "description": "Tree",
-      "icon": "tree.svg",
-      "url": "https://try.imatia.com/ontimizeweb/tree/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
-      "version": 3
-    },
-    {
-      "id": "quickstart",
-      "name": "Quickstart",
-      "description": "Quickstart",
-      "icon": "quickstart.svg",
-      "url": "https://try.imatia.com/ontimizeweb/quickstart/",
-      "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
-      "version": 4
-    }
-  ]
-}
+[
+  {
+    "id": "quickstart",
+    "name": "Quickstart",
+    "description": "Quickstart",
+    "icon": "quickstart.svg",
+    "url": "https://try.imatia.com/ontimizeweb/quickstart/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
+    "version": 3
+  },
+  {
+    "id": "quickstart-mobile",
+    "name": "Quickstart mobile",
+    "description": "Quickstart mobile",
+    "icon": "quickstartmobile.svg",
+    "url": "https://try.imatia.com/ontimizeweb/quickstartmobile/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart-mobile",
+    "version": 3
+  },
+  {
+    "id": "playground",
+    "name": "Playground",
+    "description": "Playground",
+    "icon": "playground.svg",
+    "url": "https://try.imatia.com/ontimizeweb/playground/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
+    "version": 3
+  },
+  {
+    "id": "charts",
+    "name": "Charts",
+    "description": "Charts",
+    "icon": "charts.svg",
+    "url": "https://try.imatia.com/ontimizeweb/charts/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
+    "version": 3
+  },
+  {
+    "id": "map",
+    "name": "Map",
+    "description": "Map",
+    "icon": "map.svg",
+    "url": "https://try.imatia.com/ontimizeweb/map/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
+    "version": 3
+  },
+  {
+    "id": "dynamicform",
+    "name": "Dynamic Forms",
+    "description": "Dynamic Forms",
+    "icon": "dynamicform.svg",
+    "url": "https://try.imatia.com/ontimizeweb/dynamicform/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-dynamicform-example",
+    "version": 3
+  },
+  {
+    "id": "tree",
+    "name": "Tree",
+    "description": "Tree",
+    "icon": "tree.svg",
+    "url": "https://try.imatia.com/ontimizeweb/tree/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
+    "version": 3
+  },
+  {
+    "id": "quickstart",
+    "name": "Quickstart",
+    "description": "Quickstart",
+    "icon": "quickstart.svg",
+    "url": "https://try.imatia.com/ontimizeweb/quickstart/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
+    "version": 4
+  }
+]

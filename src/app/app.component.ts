@@ -1,5 +1,6 @@
-import { Component, Injector, ViewChild, ViewEncapsulation } from '@angular/core';
-import { OGridComponent, OntimizeMatIconRegistry } from 'ontimize-web-ngx';
+import { HttpClient } from '@angular/common/http';
+import { Component, Injector, OnInit, ViewEncapsulation } from '@angular/core';
+import { OntimizeMatIconRegistry } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'o-app',
@@ -10,54 +11,51 @@ import { OGridComponent, OntimizeMatIconRegistry } from 'ontimize-web-ngx';
     '[class.o-app]': 'true'
   }
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  ontimizeMatIconRegistry: OntimizeMatIconRegistry;
-
-  selectedVersion: any;
-
-  ontimizeVersions = [{
-    title: '3.x.x',
+  public selectedVersion: any;
+  public ontimizeVersions = [{
+    title: '3.2.0',
     version: 3
   }, {
-    title: '4.x.x',
+    title: '4.0.0-rc.0',
     version: 4
   }];
+  public dataArray: any[] = [];
+  protected ontimizeMatIconRegistry: OntimizeMatIconRegistry;
 
-  @ViewChild('grid')
-  grid: OGridComponent;
-
-
-  constructor(protected injector: Injector) {
+  constructor(
+    protected injector: Injector,
+    protected httpClient: HttpClient
+  ) {
     this.ontimizeMatIconRegistry = this.injector.get(OntimizeMatIconRegistry);
     this.ontimizeMatIconRegistry.addOntimizeSvgIcon('github', 'assets/images/github.svg');
 
     this.selectedVersion = this.ontimizeVersions[0];
   }
 
-  ngAfterViewInit() {
-    this.queryGrid();
+  ngOnInit(): void {
+    this.getData();
   }
 
-  queryGrid() {
-    if (this.grid) {
-      this.grid.queryData({
-        version: this.selectedVersion.version
-      });
-    }
+  getData(): void {
+    const self = this;
+    this.httpClient.get('./assets/data/data.json').subscribe(
+      (response: any[]) => self.dataArray = response.filter(item => item.version === self.selectedVersion.version),
+      error => console.log(error)
+    );
   }
 
-  onVersionChanged(arg: any) {
+  onVersionChanged(arg: any): void {
     this.selectedVersion = arg;
-    this.queryGrid();
+    this.getData();
   }
 
-  openTab(url: string) {
+  openTab(url: string, e?: Event): void {
+    if (e) {
+      e.stopPropagation();
+    }
     window.open(url, "_blank");
-  }
-
-  onGridItemClicked() {
-    console.log("ola k ase");
   }
 
 }
