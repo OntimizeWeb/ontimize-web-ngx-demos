@@ -15,7 +15,7 @@
 <div class="o-app-grid">
   <div *ngFor="let item of dataArray" fxLayout="column" fxLayoutAlign="center stretch" (click)="openTab(item.url)"
     class="o-app-grid-item mat-elevation-z8">
-    <img [src]="'/assets/images/'+item.icon" class="o-app-grid-item-image" />
+    <img [src]="'./assets/images/'+item.icon" class="o-app-grid-item-image" />
     <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex>
       <span fxflex>{{ item.description }}</span>
       <div fxLayout="column" class="o-app-grid-item-buttons">
