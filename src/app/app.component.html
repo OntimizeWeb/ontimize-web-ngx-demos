@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
   <div fxFlex></div>
   <button mat-button [matMenuTriggerFor]="versionPicker">
-    {{ selectedVersion.title }}
+    {{ selectedVersion?.title }}
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
   <mat-menu #versionPicker="matMenu">

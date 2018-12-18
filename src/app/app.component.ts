@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Injector, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, ViewEncapsulation } from '@angular/core';
 import { OntimizeMatIconRegistry } from 'ontimize-web-ngx';
 
 @Component({
@@ -11,16 +11,10 @@ import { OntimizeMatIconRegistry } from 'ontimize-web-ngx';
     '[class.o-app]': 'true'
   }
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   public selectedVersion: any;
-  public ontimizeVersions = [{
-    title: '3.2.0',
-    version: 3
-  }, {
-    title: '4.0.0-rc.0',
-    version: 4
-  }];
+  public ontimizeVersions: any[];
   public dataArray: any[] = [];
   protected ontimizeMatIconRegistry: OntimizeMatIconRegistry;
 
@@ -31,24 +25,32 @@ export class AppComponent implements OnInit {
     this.ontimizeMatIconRegistry = this.injector.get(OntimizeMatIconRegistry);
     this.ontimizeMatIconRegistry.addOntimizeSvgIcon('github', 'assets/images/github.svg');
 
-    this.selectedVersion = this.ontimizeVersions[0];
+    this.getVersions();
+    this.getDemos();
   }
 
-  ngOnInit(): void {
-    this.getData();
-  }
-
-  getData(): void {
+  getVersions(): void {
     const self = this;
-    this.httpClient.get('./assets/data/data.json').subscribe(
-      (response: any[]) => self.dataArray = response.filter(item => item.version === self.selectedVersion.version),
+    this.httpClient.get('./assets/data/versions.json').subscribe(
+      (response: any[]) => {
+        self.ontimizeVersions = response;
+        self.selectedVersion = self.ontimizeVersions[0];
+      },
+      error => console.log(error)
+    );
+  }
+
+  getDemos(): void {
+    const self = this;
+    this.httpClient.get('./assets/data/demos.json').subscribe(
+      (response: any[]) => self.dataArray = response.filter((item: any) => item.version === self.selectedVersion.version),
       error => console.log(error)
     );
   }
 
   onVersionChanged(arg: any): void {
     this.selectedVersion = arg;
-    this.getData();
+    this.getDemos();
   }
 
   openTab(url: string, e?: Event): void {
