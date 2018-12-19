@@ -6,7 +6,10 @@
 
   .o-app-grid {
     background-image: url('./assets/images/background.jpg');
-    background-repeat: round;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #242424;
     height: 100%;
     display: flex;
     flex: 1 1 100%;
