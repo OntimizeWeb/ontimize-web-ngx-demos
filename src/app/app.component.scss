@@ -6,7 +6,7 @@
 
   .o-app-grid {
     background-image: url('./assets/images/background.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #242424;
@@ -20,16 +20,16 @@
     overflow: auto;
 
     .o-app-grid-item {
-      width: 236px;
-      height: 164px;
+      width: 15em;
+      height: 10em;
       background: #ffffff;
       border-radius: 5px;
       margin: 8px;
       cursor: pointer;
 
       .o-app-grid-item-image {
-        width: 200px;
-        height: 114px;
+        width: 14em;
+        height: 7em;
         min-width: 205px;
         margin: 14px 15px 0 14px;
       }
