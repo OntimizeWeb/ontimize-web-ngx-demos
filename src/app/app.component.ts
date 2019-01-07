@@ -25,19 +25,24 @@ export class AppComponent {
     this.ontimizeMatIconRegistry = this.injector.get(OntimizeMatIconRegistry);
     this.ontimizeMatIconRegistry.addOntimizeSvgIcon('github', 'assets/images/github.svg');
 
-    this.getVersions();
-    this.getDemos();
+    this.getVersions().then(() => this.getDemos());
   }
 
-  getVersions(): void {
+  getVersions(): Promise<any> {
     const self = this;
-    this.httpClient.get('./assets/data/versions.json').subscribe(
-      (response: any[]) => {
-        self.ontimizeVersions = response;
-        self.selectedVersion = self.ontimizeVersions[0];
-      },
-      error => console.log(error)
-    );
+    return new Promise((resolve, reject) => {
+      this.httpClient.get('./assets/data/versions.json').subscribe(
+        (response: any[]) => {
+          self.ontimizeVersions = response;
+          self.selectedVersion = self.ontimizeVersions[0];
+          resolve();
+        },
+        error => {
+          console.log(error);
+          reject();
+        }
+      )
+    });
   }
 
   getDemos(): void {
