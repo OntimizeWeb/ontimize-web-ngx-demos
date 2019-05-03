@@ -106,5 +106,23 @@
     "url": "https://try.imatia.com/ontimizeweb/appearance/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-appearance",
     "version": 4
+  },
+  {
+    "id": "dynamicform",
+    "name": "Dynamic Forms",
+    "description": "Dynamic Forms",
+    "icon": "dynamicform.svg",
+    "url": "https://try.imatia.com/ontimizeweb/dynamicform/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-dynamicform-example",
+    "version": 4
+  },
+  {
+    "id": "tree4",
+    "name": "Tree",
+    "description": "Tree",
+    "icon": "tree.svg",
+    "url": "https://try.imatia.com/ontimizeweb/tree/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
+    "version": 4
   }
 ]
