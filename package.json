@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-demos",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -32,8 +32,8 @@
     "rxjs": "6.3.3",
     "zone.js": "0.8.26",
     "reflect-metadata": "0.1.12",
-    "ontimize-web-ngx": "4.0.0-rc.0",
-    "ontimize-web-ngx-theming": "4.0.0-rc.0"
+    "ontimize-web-ngx": "4.0.7",
+    "ontimize-web-ngx-theming": "4.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
@@ -44,8 +44,8 @@
     "compression-webpack-plugin": "1.1.12",
     "copy-webpack-plugin": "4.5.4",
     "html-webpack-plugin": "4.0.0-beta.2",
-    "node-sass": "4.9.4",
-    "ontimize-web-ngx-tools": "4.0.0-rc.0",
+    "node-sass": "4.11",
+    "ontimize-web-ngx-tools": "4.0.0",
     "ts-node": "~2.0.0",
     "typescript": "2.9.2",
     "webpack": "4.18.0",
