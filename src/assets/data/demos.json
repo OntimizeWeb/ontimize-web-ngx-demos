@@ -9,15 +9,6 @@
     "version": 3
   },
   {
-    "id": "quickstart-mobile",
-    "name": "Quickstart mobile",
-    "description": "Quickstart mobile",
-    "icon": "quickstartmobile.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v3/quickstartmobile/",
-    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart-mobile",
-    "version": 3
-  },
-  {
     "id": "playground",
     "name": "Playground",
     "description": "Playground",
@@ -42,24 +33,6 @@
     "icon": "map.svg",
     "url": "https://try.imatia.com/ontimizeweb/v3/map/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
-    "version": 3
-  },
-  {
-    "id": "dynamicform",
-    "name": "Dynamic Forms",
-    "description": "Dynamic Forms",
-    "icon": "dynamicform.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v3/dynamicform/",
-    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-dynamicform-example",
-    "version": 3
-  },
-  {
-    "id": "tree",
-    "name": "Tree",
-    "description": "Tree",
-    "icon": "tree.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v3/tree/",
-    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
     "version": 3
   },
   {
