@@ -133,5 +133,14 @@
     "url": "https://try.imatia.com/ontimizeweb/v8/map/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
     "version": 8
+  },
+  {
+    "id": "tree8",
+    "name": "Tree",
+    "description": "Tree",
+    "icon": "tree.svg",
+    "url": "https://try.imatia.com/ontimizeweb/v8/tree/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
+    "version": 8
   }
 ]
