@@ -142,5 +142,13 @@
     "url": "https://try.imatia.com/ontimizeweb/v8/tree/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
     "version": 8
+  },{
+    "id": "appearance8",
+    "name": "Appearance",
+    "description": "Appearance",
+    "icon": "appearance.svg",
+    "url": "https://try.imatia.com/ontimizeweb/v8/appearance/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-appearance",
+    "version": 8
   }
 ]
