@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Injector, ViewEncapsulation } from '@angular/core';
-import { OntimizeMatIconRegistry } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'o-app',
@@ -16,15 +15,11 @@ export class AppComponent {
   public selectedVersion: any;
   public ontimizeVersions: any[];
   public dataArray: any[] = [];
-  protected ontimizeMatIconRegistry: OntimizeMatIconRegistry;
 
   constructor(
     protected injector: Injector,
     protected httpClient: HttpClient
   ) {
-    this.ontimizeMatIconRegistry = this.injector.get(OntimizeMatIconRegistry);
-    this.ontimizeMatIconRegistry.addOntimizeSvgIcon('github', 'assets/images/github.svg');
-
     this.getVersions().then(() => this.getDemos());
   }
 

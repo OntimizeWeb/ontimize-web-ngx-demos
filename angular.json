@@ -18,21 +18,13 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ontimize-web-ngx/assets",
-                "output": "/assets"
-              },
               "src/favicon.ico"
             ],
             "styles": [
-              "node_modules/ontimize-web-ngx/ontimize.scss",
               "src/assets/css/app.scss",
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/domchange.js",
-              "src/assets/js/keyboard.js"
             ]
           },
           "configurations": {
@@ -80,21 +72,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "src/assets/js/domchange.js",
-              "src/assets/js/keyboard.js"
             ],
             "styles": [
-              "node_modules/ontimize-web-ngx/ontimize.scss",
               "src/assets/css/app.scss",
               "src/styles.scss"
             ],
             "assets": [
               "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ontimize-web-ngx/assets",
-                "output": "/assets"
-              },
               "src/favicon.ico"
             ]
           }
