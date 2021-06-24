@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Injector, ViewEncapsulation } from '@angular/core';
-import { OntimizeMatIconRegistry } from 'ontimize-web-ngx';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'o-app',
@@ -16,14 +17,15 @@ export class AppComponent {
   public selectedVersion: any;
   public ontimizeVersions: any[];
   public dataArray: any[] = [];
-  protected ontimizeMatIconRegistry: OntimizeMatIconRegistry;
 
   constructor(
     protected injector: Injector,
-    protected httpClient: HttpClient
+    protected httpClient: HttpClient,
+    protected domSanitizer: DomSanitizer,
+    protected matIconRegistry: MatIconRegistry
   ) {
-    this.ontimizeMatIconRegistry = this.injector.get(OntimizeMatIconRegistry);
-    this.ontimizeMatIconRegistry.addOntimizeSvgIcon('github', 'assets/images/github.svg');
+    this.matIconRegistry.addSvgIconInNamespace('ontimize', 'github',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/github.svg'));
 
     this.getVersions().then(() => this.getDemos());
   }
@@ -35,7 +37,7 @@ export class AppComponent {
         (response: any[]) => {
           self.ontimizeVersions = response;
           self.selectedVersion = self.ontimizeVersions[0];
-          resolve();
+          resolve(true);
         },
         error => {
           console.log(error);

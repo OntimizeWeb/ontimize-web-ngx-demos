@@ -1,16 +1,21 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { APP_CONFIG, ONTIMIZE_MODULES, ONTIMIZE_PROVIDERS, OntimizeWebModule } from 'ontimize-web-ngx';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CONFIG } from './app.config';
-
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   imports: [
     AppRoutingModule,
-    ONTIMIZE_MODULES,
-    OntimizeWebModule
+    CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent
@@ -18,9 +23,6 @@ import { CONFIG } from './app.config';
   bootstrap: [
     AppComponent
   ],
-  providers: [
-    { provide: APP_CONFIG, useValue: CONFIG },
-    ...ONTIMIZE_PROVIDERS
-  ],
+  providers: [],
 })
 export class AppModule { }

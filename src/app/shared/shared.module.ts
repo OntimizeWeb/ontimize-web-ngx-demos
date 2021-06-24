@@ -1,15 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { OntimizeWebModule } from 'ontimize-web-ngx';
 
+import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatIconModule,
+  MatToolbarModule,
+} from '@angular/material';
 @NgModule({
-  imports: [
-    OntimizeWebModule
-  ],
-  declarations: [
-  ],
   exports: [
-    CommonModule
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    FlexLayoutModule,
   ]
 })
 export class SharedModule { }
