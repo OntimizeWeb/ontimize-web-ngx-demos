@@ -4,6 +4,79 @@
   overflow: hidden;
   flex-direction: column;
 
+  &.version8 {
+    button,
+    html,
+    input,
+    select,
+    span,
+    textarea {
+      font-family: Poppins, "Helvetica Neue", sans-serif;
+    }
+
+    .mat-toolbar.mat-primary {
+      background-color: transparent;
+      color: #707070;
+    }
+
+    .o-app-grid {
+      background-image: none;
+      background-color: #ECEFF1;
+      overflow: hidden;
+
+      .scrollable {
+        overflow-y: auto;
+      }
+
+      .container-grid {
+        height: 100%;
+        //  overflow-y: scroll;
+      }
+
+      .o-app-grid-item {
+        box-shadow: 0 4px 4px #0000001A;
+        height: auto;
+        background: #ffffff;
+        margin: 24px;
+        padding: 16px;
+        cursor: default;
+
+        .github_button {
+          top: 4px;
+        }
+
+        .title {
+          font-size: 20px;
+          color: #1464A5;
+          margin: 12px;
+          font-weight: 600;
+        }
+
+        .o-app-grid-item-image {
+          width: 64px;
+          min-width: auto;
+          max-width: auto;
+          margin: 0 90px;
+          height: auto;
+
+        }
+
+        .link-button {
+          background-color: #B9D1E4;
+          color: #0B488A;
+        }
+      }
+    }
+
+    .background {
+      background-image: url('/assets/images/backgroundv8.png');
+      background-color: #ECEFF1;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
   .o-app-grid {
     background-image: url('/assets/images/background.jpg');
     background-size: cover;
@@ -22,9 +95,10 @@
     .o-app-grid-item {
       height: 10em;
       background: #ffffff;
-      border-radius: 5px;
+      border-radius: 4px;
       margin: 8px;
       cursor: pointer;
+      position: relative;
 
       .o-app-grid-item-image {
         height: 7em;
@@ -32,25 +106,22 @@
         margin: 14px 15px 0 14px;
       }
 
-      .o-app-grid-item-bottom {
-        position: relative;
+      .github_button {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
 
-        .o-app-grid-item-buttons {
-          position: absolute;
-          right: 4px;
-          bottom: 4px;
+        .mat-icon-button {
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
 
-          .mat-icon-button {
-            width: 28px;
-            height: 28px;
-            line-height: 28px;
-
-            .mat-icon {
-              width: 22px;
-              height: 22px;
-            }
+          .mat-icon {
+            width: 22px;
+            height: 22px;
           }
         }
+
       }
     }
   }
