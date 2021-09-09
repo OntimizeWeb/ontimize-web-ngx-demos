@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Injector, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Injector, ViewEncapsulation } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -7,16 +7,21 @@ import { DomSanitizer } from '@angular/platform-browser';
   selector: 'o-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  host: {
-    '[class.o-app]': 'true'
-  }
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
 
   public selectedVersion: any;
   public ontimizeVersions: any[];
   public dataArray: any[] = [];
+
+  @HostBinding('class') get classes(): string {
+    let className = 'o-app ';
+    if (this.selectedVersion) {
+      className +=  ('version' + this.selectedVersion.version);
+    }
+    return className;
+  };
 
   constructor(
     protected injector: Injector,
