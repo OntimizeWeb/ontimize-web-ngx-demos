@@ -5,6 +5,7 @@
 // @import 'node_modules/ontimize-web-ngx-theming/src/themes/mat-pink-bluegrey.scss';
 // @import 'node_modules/ontimize-web-ngx-theming/src/themes/mat-purple-green.scss';
 @import './ontimize.scss';
+@import './ontimize-black-yellow.scss';
 
 // // Include ontimize theme
 // @import 'node_modules/ontimize-web-ngx-theming/ontimize-theme.scss';
@@ -19,7 +20,10 @@
 // @include o-material-theme($theme);
 
 // Propagate theme to screen styles definition.
-
 @import '~@angular/material/theming';
 @include mat-core();
-@include angular-material-theme($theme);
+@include angular-material-theme($theme-black-yellow);
+
+.o-app.version8 {
+  @include angular-material-theme($theme-ontimize);
+}
