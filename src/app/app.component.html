@@ -11,39 +11,54 @@
   <a mat-button href="https://github.com/OntimizeWeb/ontimize-web-ngx" aria-label="GitHub Repository" target="_blank">
     <mat-icon svgIcon="ontimize:github"></mat-icon>&nbsp;GitHub
   </a>
-  <a mat-button href="https://ontimizeweb.github.io/docs/" aria-label="OntimizeWeb Docs" target="_blank">
+  <a mat-button href="https://ontimizeweb.github.io/docs/{{ selectedVersion?.version===4?'v4':'' }}" aria-label="OntimizeWeb Docs" target="_blank">
     <img src="./assets/images/ontimize.png" class="mat-icon">&nbsp;Docs
   </a>
 </mat-toolbar>
 <div class="o-app-grid">
   <ng-container *ngIf="selectedVersion?.version===8; else gridTemplate">
+
     <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
       <div fxLayout="column" fxLayoutAlign="start start" fxFlex.md="40%" fxFlex="50%" class="background">
       </div>
       <div fxLayout="column" fxLayoutAlign="center center" fxFlex.md="60%" fxFlex="50%" class="container-grid">
         <div class="scrollable">
           <div fxLayout="row wrap" fxLayoutAlign="center start">
-            <ng-container *ngTemplateOutlet="gridTemplate"></ng-container>
+            <ng-container *ngTemplateOutlet="gridTemplatev8"></ng-container>
           </div>
         </div>
       </div>
     </div>
+
   </ng-container>
 
 </div>
 
 <ng-template #gridTemplate>
-  <div *ngFor="let item of dataArray" fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8">
+  <div *ngFor="let item of dataArray" fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8"
+    (click)="openTab(item.url)">
     <img [src]="'./assets/images/'+item.icon" class="o-app-grid-item-image" />
-    <div [fxLayout]="selectedVersion?.version===8?'column':'row'" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex>
+    <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex (click)="openTab(item.url)">
       <span class="title" fxflex>{{ item.description }}</span>
-      <button class="link-button" type="button" mat-button color="primary" (click)="openTab(item.url)" *ngIf="selectedVersion?.version===8 ">
-        Acceder
-      </button>
-
     </div>
     <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
       <mat-icon svgIcon="ontimize:github"></mat-icon>
     </button>
   </div>
+
+</ng-template>
+<ng-template #gridTemplatev8>
+  <div *ngFor="let item of dataArray" fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8">
+    <img [src]="'./assets/images/'+item.icon" class="o-app-grid-item-image" />
+    <div fxLayout="column" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex>
+      <span class="title" fxflex>{{ item.description }}</span>
+      <button class="link-button" type="button" mat-button color="primary" (click)="openTab(item.url)">
+        Acceder
+      </button>
+    </div>
+    <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
+      <mat-icon svgIcon="ontimize:github"></mat-icon>
+    </button>
+  </div>
+
 </ng-template>
