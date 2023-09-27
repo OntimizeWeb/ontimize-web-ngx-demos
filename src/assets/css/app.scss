@@ -4,22 +4,14 @@
 @import './ontimize.scss';
 // @import './ontimize-black-yellow.scss';
 
-// // Include ontimize theme
-// @import 'node_modules/ontimize-web-ngx-theming/ontimize-theme.scss';
-// @include ontimize-theme-styles($theme);
-
-// // Include ontimize-lite theme
-// // @import 'node_modules/ontimize-web-ngx-theming/ontimize-theme-lite.scss';
-// // @include ontimize-theme-styles-lite($theme);
-
-// // After define theme, it is necessary to transfer color to Ontimize Web framework
-// @import 'node_modules/ontimize-web-ngx/theme.scss';
-// @include o-material-theme($theme);
 
 // Propagate theme to screen styles definition.
-
 // @include mat.all-component-themes($theme-black-yellow);
 
 .o-app.version8 {
   @include mat.all-component-themes($theme-ontimize);
+}
+
+.o-app.version15 {
+  @include mat.all-component-themes($theme-ontimize-dark);
 }

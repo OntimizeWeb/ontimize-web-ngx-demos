@@ -15,9 +15,8 @@
     <img src="./assets/images/ontimize.png" class="mat-icon">&nbsp;Docs
   </a>
 </mat-toolbar>
-<div class="o-app-grid">
-  <ng-container *ngIf="selectedVersion?.version===8 || selectedVersion?.version===15; else gridTemplate">
-
+<div class="o-app-grid" [ngSwitch]="selectedVersion?.version">
+  <ng-container *ngSwitchCase="8">
     <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
       <div fxLayout="column" fxLayoutAlign="start start" fxFlex.md="40%" fxFlex="50%" class="background">
       </div>
@@ -29,7 +28,22 @@
         </div>
       </div>
     </div>
+  </ng-container>
 
+  <ng-container *ngSwitchCase="15">
+    <div fxLayout="row" fxLayoutAlign="end center" fxFlexFill class="background">
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlex.md="60%" fxFlex="50%" class="container-grid">
+        <div class="scrollable">
+          <div fxLayout="row wrap" fxLayoutAlign="center start">
+            <ng-container *ngTemplateOutlet="gridTemplatev8"></ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <ng-container *ngTemplateOutlet="gridTemplate"></ng-container>
   </ng-container>
 
 </div>
