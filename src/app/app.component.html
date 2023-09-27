@@ -16,7 +16,7 @@
   </a>
 </mat-toolbar>
 <div class="o-app-grid">
-  <ng-container *ngIf="selectedVersion?.version===8; else gridTemplate">
+  <ng-container *ngIf="selectedVersion?.version===8 || selectedVersion?.version===15; else gridTemplate">
 
     <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
       <div fxLayout="column" fxLayoutAlign="start start" fxFlex.md="40%" fxFlex="50%" class="background">
@@ -45,8 +45,8 @@
       <mat-icon svgIcon="ontimize:github"></mat-icon>
     </button>
   </div>
-
 </ng-template>
+
 <ng-template #gridTemplatev8>
   <div *ngFor="let item of dataArray" fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8">
     <img [src]="'./assets/images/'+item.icon" class="o-app-grid-item-image" />
@@ -60,5 +60,4 @@
       <mat-icon svgIcon="ontimize:github"></mat-icon>
     </button>
   </div>
-
 </ng-template>

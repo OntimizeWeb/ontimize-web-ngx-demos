@@ -12,7 +12,7 @@ if (environment.production) {
 const promise = platformBrowserDynamic().bootstrapModule(AppModule);
 promise.then((ngModuleRef: NgModuleRef<any>): NgModuleRef<any> => {
   // Hiding loader...
-  const loader: HTMLElement = document && document.getElementById('loader-wrapper');
+  const loader: HTMLElement = document && document.getElementById('loader-wrapper') as HTMLElement;
   if (loader && loader.parentNode) {
     loader.parentNode.removeChild(loader);
   }
