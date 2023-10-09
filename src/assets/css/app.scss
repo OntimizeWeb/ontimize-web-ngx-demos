@@ -8,10 +8,8 @@
 // Propagate theme to screen styles definition.
 // @include mat.all-component-themes($theme-black-yellow);
 
-.o-app.version8 {
-  @include mat.all-component-themes($theme-ontimize);
-}
+@include mat.all-component-themes($theme-ontimize);
 
 .o-app.version15 {
-  @include mat.all-component-themes($theme-ontimize-dark);
+  @include mat.all-component-colors($theme-ontimize-dark);
 }
