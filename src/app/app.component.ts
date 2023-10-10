@@ -14,11 +14,15 @@ export class AppComponent {
   public selectedVersion: any;
   public ontimizeVersions: any[] = [];
   public dataArray: any[] = [];
+  public color = 'primary'
 
   @HostBinding('class') get classes(): string {
     let className = 'o-app ';
     if (this.selectedVersion) {
       className += ('version' + this.selectedVersion.version);
+      if (this.selectedVersion.version === 15) {
+        this.color = '';
+      }
     }
     return className;
   };
@@ -42,7 +46,7 @@ export class AppComponent {
         (response) => {
           if (response && Array.isArray(response)) {
             self.ontimizeVersions = response;
-            self.selectedVersion = self.ontimizeVersions[0];
+            self.selectedVersion = self.ontimizeVersions[1];
             resolve(true);
           }
           reject();
