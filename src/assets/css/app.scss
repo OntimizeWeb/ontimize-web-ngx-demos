@@ -2,14 +2,15 @@
 @include mat.core();
 
 @import './ontimize.scss';
-// @import './ontimize-black-yellow.scss';
 
-
-// Propagate theme to screen styles definition.
-// @include mat.all-component-themes($theme-black-yellow);
 
 @include mat.all-component-themes($theme-ontimize);
 
 .o-app.version15 {
   @include mat.all-component-colors($theme-ontimize-dark);
+}
+
+.o-app.version4 {
+  @import './ontimize-black-yellow.scss';
+  @include mat.all-component-colors($theme-black-yellow);
 }
