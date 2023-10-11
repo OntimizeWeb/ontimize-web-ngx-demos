@@ -4,8 +4,9 @@
   overflow: hidden;
   flex-direction: column;
 
-  .github-button.mat-mdc-button {
-    .mat-icon{
+  .github-button,
+  .github_button {
+    &.mat-mdc-button-base .mat-icon {
       line-height: 1;
     }
   }

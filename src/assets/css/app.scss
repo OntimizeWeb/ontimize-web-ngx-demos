@@ -1,4 +1,5 @@
 @use '@angular/material'as mat;
+@use "sass:map";
 @include mat.core();
 
 @import './ontimize.scss';
@@ -7,7 +8,11 @@
 @include mat.all-component-themes($theme-ontimize);
 
 .o-app.version15 {
-  @include mat.all-component-colors($theme-ontimize-dark);
+  .title {
+    $primary: map.get($theme-ontimize, color, primary);
+    color: mat.get-color-from-palette($primary);
+    font-weight: bold;
+  }
 }
 
 .o-app.version4 {
