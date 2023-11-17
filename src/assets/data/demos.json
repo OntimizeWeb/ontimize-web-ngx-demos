@@ -150,5 +150,41 @@
     "url": "https://try.imatia.com/ontimizeweb/v8/appearance/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-appearance",
     "version": 8
+  },
+  {
+    "id": "quickstart15",
+    "name": "Quickstart",
+    "description": "Quickstart",
+    "icon": "quickstartv8.svg",
+    "url": "https://try.imatia.com/ontimizeweb/v15/quickstart/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
+    "version": 15
+  },
+  {
+    "id": "playground15",
+    "name": "Playground",
+    "description": "Playground",
+    "icon": "playgroundv8.svg",
+    "url": "https://try.imatia.com/ontimizeweb/v15/playground/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
+    "version": 15
+  },
+  {
+    "id": "charts15",
+    "name": "Charts",
+    "description": "Charts",
+    "icon": "chartsv8.svg",
+    "url": "https://try.imatia.com/ontimizeweb/v15/charts/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
+    "version": 15
+  },
+  {
+    "id": "map15",
+    "name": "Map",
+    "description": "Map",
+    "icon": "mapv8.svg",
+    "url": "https://try.imatia.com/ontimizeweb/v15/map/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
+    "version": 15
   }
 ]
