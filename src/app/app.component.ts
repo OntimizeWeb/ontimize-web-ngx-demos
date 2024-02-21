@@ -46,7 +46,7 @@ export class AppComponent {
         (response) => {
           if (response && Array.isArray(response)) {
             self.ontimizeVersions = response;
-            self.selectedVersion = self.ontimizeVersions[1];
+            self.selectedVersion = self.ontimizeVersions[0];
             resolve(true);
           }
           reject();
