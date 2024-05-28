@@ -156,7 +156,7 @@
     "name": "Quickstart",
     "description": "Quickstart",
     "icon": "quickstartv8.svg",
-    "url" "https://try.imatia.com/ontimizeweb-test/v15/quickstart/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v15/quickstart/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
     "version": 15
   },
