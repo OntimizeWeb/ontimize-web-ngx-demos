@@ -38,16 +38,23 @@ spec:
           pathType: ImplementationSpecific
         - backend:
             service:
+              name: ontimize-web-ngx-playground-15x
+              port:
+                number: 41501
+          path: /v15/playground(/|$)(.*)
+          pathType: ImplementationSpecific
+        - backend:
+            service:
               name: ontimize-web-ngx-charts-15x
               port:
-                number: 41500
+                number: 41507
           path: /v15/charts(/|$)(.*)
           pathType: ImplementationSpecific
         - backend:
             service:
               name: ontimize-web-ngx-map-15x
               port:
-                number: 41500
+                number: 41506
           path: /v15/map(/|$)(.*)
           pathType: ImplementationSpecific
 {{- end }}
