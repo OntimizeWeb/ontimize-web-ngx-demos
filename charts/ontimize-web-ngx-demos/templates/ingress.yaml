@@ -36,4 +36,18 @@ spec:
                 number: 41500
           path: /v15/quickstart(/|$)(.*)
           pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: ontimize-web-ngx-charts-15x
+              port:
+                number: 41500
+          path: /v15/charts(/|$)(.*)
+          pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: ontimize-web-ngx-map-15x
+              port:
+                number: 41500
+          path: /v15/map(/|$)(.*)
+          pathType: ImplementationSpecific
 {{- end }}
