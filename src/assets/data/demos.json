@@ -103,7 +103,7 @@
     "name": "Quickstart",
     "description": "Quickstart",
     "icon": "quickstartv8.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v8/quickstart/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v8/quickstart/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
     "version": 8
   },
@@ -112,7 +112,7 @@
     "name": "Playground",
     "description": "Playground",
     "icon": "playgroundv8.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v8/playground/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v8/playground/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
     "version": 8
   },
@@ -121,7 +121,7 @@
     "name": "Charts",
     "description": "Charts",
     "icon": "chartsv8.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v8/charts/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v8/charts/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
     "version": 8
   },
@@ -130,7 +130,7 @@
     "name": "Map",
     "description": "Map",
     "icon": "mapv8.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v8/map/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v8/map/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
     "version": 8
   },
@@ -139,7 +139,7 @@
     "name": "Tree",
     "description": "Tree",
     "icon": "treev8.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v8/tree/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v8/tree/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
     "version": 8
   },{
@@ -147,7 +147,7 @@
     "name": "Appearance",
     "description": "Appearance",
     "icon": "appearancev8.svg",
-    "url": "https://try.imatia.com/ontimizeweb/v8/appearance/",
+    "url": "https://try.imatia.com/ontimizeweb-test/v8/appearance/",
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-appearance",
     "version": 8
   },
