@@ -29,6 +29,7 @@ spec:
                 number: {{ .Values.service.externalPort }}
           path: /()(.*)
           pathType: Prefix
+          # 15x demos rewrite rules
         - backend:
             service:
               name: ontimize-web-ngx-quickstart-15x
@@ -56,5 +57,13 @@ spec:
               port:
                 number: 41506
           path: /v15/map(/|$)(.*)
+          pathType: ImplementationSpecific
+          # 8x demos rewrite rules
+          - backend:
+            service:
+              name: ontimize-web-ngx-charts-8x
+              port:
+                number: 41507
+          path: /v8/charts(/|$)(.*)
           pathType: ImplementationSpecific
 {{- end }}
