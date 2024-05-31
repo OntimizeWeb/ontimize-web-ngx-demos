@@ -87,4 +87,11 @@ spec:
                 number: 4806
           path: /v8/map(/|$)(.*)
           pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: ontimize-web-ngx-tree-8x
+              port:
+                number: 4808
+          path: /v8/tree(/|$)(.*)
+          pathType: ImplementationSpecific
 {{- end }}
