@@ -59,7 +59,7 @@ spec:
           path: /v15/map(/|$)(.*)
           pathType: ImplementationSpecific
           # 8x demos rewrite rules
-          - backend:
+        - backend:
             service:
               name: ontimize-web-ngx-charts-8x
               port:
