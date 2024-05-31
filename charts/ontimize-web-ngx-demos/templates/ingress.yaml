@@ -71,6 +71,6 @@ spec:
               name: ontimize-web-ngx-map-8x
               port:
                 number: 4806
-          path: /v8/charts(/|$)(.*)
+          path: /v8/map(/|$)(.*)
           pathType: ImplementationSpecific
 {{- end }}
