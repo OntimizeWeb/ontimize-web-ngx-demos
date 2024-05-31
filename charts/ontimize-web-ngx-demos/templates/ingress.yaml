@@ -63,7 +63,7 @@ spec:
             service:
               name: ontimize-web-ngx-charts-8x
               port:
-                number: 41507
+                number: 4807
           path: /v8/charts(/|$)(.*)
           pathType: ImplementationSpecific
 {{- end }}
