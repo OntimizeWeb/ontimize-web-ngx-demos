@@ -6,7 +6,7 @@ image:
   pullPolicy: Always
   ## provided as basic setup. replace as needed
   repository: ghcr.io/ontimizeweb/ontimize-web-ngx-demos
-  version: feature-configure-ingress
+  version: develop
 imagePullSecrets:
   - name: github-ecr-cred
 nameOverride: ""
