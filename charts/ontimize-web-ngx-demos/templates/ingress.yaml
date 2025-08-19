@@ -28,7 +28,7 @@ spec:
               port:
                 number: {{ .Values.service.externalPort }}
           path: /()(.*)
-          pathType: Prefix
+          pathType: ImplementationSpecific
           # 15x demos rewrite rules
         - backend:
             service:
