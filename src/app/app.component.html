@@ -1,5 +1,8 @@
-<mat-toolbar [color]="color" class="mat-elevation-z6">
-  <div fxFlex class="title">Ontimize Web</div>
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center">
+    <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
+    <span class="title">Ontimize Web</span>
+  </div>
   <button mat-button [matMenuTriggerFor]="versionPicker">
     {{ selectedVersion?.title }}
     <mat-icon>arrow_drop_down</mat-icon>
@@ -17,6 +20,10 @@
     &nbsp;<span>Docs</span>
   </a>
 </mat-toolbar>
+<div fxLayout="row" fxFlex="540px">
+  <img class="head-image" src="./assets/images/grupo-de-jovenes.jpg">
+</div>
+
 <div class="o-app-grid" [ngSwitch]="selectedVersion?.version">
   <ng-container *ngSwitchCase="8">
     <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>

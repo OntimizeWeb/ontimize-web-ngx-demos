@@ -6,16 +6,3 @@
 
 
 @include mat.all-component-themes($theme-ontimize);
-
-.o-app.version15 {
-  .title {
-    $primary: map.get($theme-ontimize, color, primary);
-    color: mat.get-color-from-palette($primary);
-    font-weight: bold;
-  }
-}
-
-.o-app.version4 {
-  @import './ontimize-black-yellow.scss';
-  @include mat.all-component-colors($theme-black-yellow);
-}

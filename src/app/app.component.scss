@@ -11,21 +11,33 @@
     }
   }
 
+  .ontimize-icon {
+    height: 25px;
+    width: 21px;
+    margin-left: 32px;
+  }
+
+  .title {
+    margin: 18px 0;
+  }
+
+  .head-image{
+    transform: scaleX(-1);
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+  }
+
+  button,
+  html,
+  input,
+  select,
+  span,
+  textarea {
+    font-family: Poppins, "Helvetica Neue", sans-serif;
+  }
+
   &.version8 {
-
-    button,
-    html,
-    input,
-    select,
-    span,
-    textarea {
-      font-family: Poppins, "Helvetica Neue", sans-serif;
-    }
-
-    .mat-toolbar.mat-primary {
-      background-color: transparent;
-      color: #707070;
-    }
 
     .o-app-grid {
       background-image: none;
@@ -50,13 +62,6 @@
 
         .github_button {
           top: 4px;
-        }
-
-        .title {
-          font-size: 20px;
-          color: #1464A5;
-          margin: 12px;
-          font-weight: 600;
         }
 
         .o-app-grid-item-image {
@@ -87,20 +92,6 @@
 
   &.version15 {
 
-    button,
-    html,
-    input,
-    select,
-    span,
-    textarea {
-      font-family: Poppins, "Helvetica Neue", sans-serif;
-    }
-
-    .mat-toolbar.mat-primary {
-      // background-color: transparent;
-      // color: #707070;
-    }
-
     .o-app-grid {
       background-image: none;
       // background-color: #ECEFF1;
@@ -125,13 +116,6 @@
 
         .github_button {
           top: 4px;
-        }
-
-        .title {
-          font-size: 20px;
-          color: #1464A5;
-          margin: 12px;
-          font-weight: 600;
         }
 
         .o-app-grid-item-image {
