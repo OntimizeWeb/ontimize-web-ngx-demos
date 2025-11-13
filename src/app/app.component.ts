@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostBinding, Injector, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Injector, OnInit, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
@@ -9,20 +9,16 @@ import { MatIconRegistry } from '@angular/material/icon';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   public selectedVersion: any;
   public ontimizeVersions: any[] = [];
   public dataArray: any[] = [];
-  public color = 'primary'
 
   @HostBinding('class') get classes(): string {
     let className = 'o-app ';
     if (this.selectedVersion) {
       className += ('version' + this.selectedVersion.version);
-      if (this.selectedVersion.version === 15) {
-        this.color = '';
-      }
     }
     return className;
   };
@@ -35,7 +31,9 @@ export class AppComponent {
   ) {
     this.matIconRegistry.addSvgIconInNamespace('ontimize', 'github',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/github.svg'));
+  }
 
+  ngOnInit(): void {
     this.getVersions().then(() => this.getDemos());
   }
 
@@ -48,8 +46,9 @@ export class AppComponent {
             self.ontimizeVersions = response;
             self.selectedVersion = self.ontimizeVersions[0];
             resolve(true);
+          } else {
+            reject();
           }
-          reject();
         },
         error => {
           console.log(error);
@@ -82,6 +81,16 @@ export class AppComponent {
     }
     window.open(url, "_blank");
   }
+
+  openDocs() {
+    window.open("https://ontimizeweb.github.io/docs/v" + this.selectedVersion.version);
+  }
+
+  openGitHub() {
+    window.open("https://github.com/OntimizeWeb/ontimize-web-ngx");
+  }
+
+
 
 
 

@@ -1,8 +1,5 @@
-@use '@angular/material'as mat;
-@use "sass:map";
-@include mat.core();
+@use 'node_modules/ontimize-web-ngx/theming/themes/ontimize.scss' as theme;
+@use 'node_modules/ontimize-web-ngx/theming/ontimize-style.scss';
 
-@import './ontimize.scss';
-
-
-@include mat.all-component-themes($theme-ontimize);
+/* Include ontimize styles */
+@include ontimize-style.ontimize-theme-styles(theme.$theme);

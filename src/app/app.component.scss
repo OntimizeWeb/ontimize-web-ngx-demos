@@ -1,7 +1,6 @@
 .o-app {
   height: 100%;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
 
   .github-button,
@@ -11,30 +10,24 @@
     }
   }
 
+  .toolbar-title {
+    margin-left: 32px;
+  }
+
   .ontimize-icon {
     height: 25px;
     width: 21px;
-    margin-left: 32px;
   }
 
   .title {
     margin: 18px 0;
   }
 
-  .head-image{
+  .head-image {
     transform: scaleX(-1);
     width: 100%;
     object-fit: cover;
     filter: grayscale(1);
-  }
-
-  button,
-  html,
-  input,
-  select,
-  span,
-  textarea {
-    font-family: Poppins, "Helvetica Neue", sans-serif;
   }
 
   &.version8 {
@@ -93,9 +86,6 @@
   &.version15 {
 
     .o-app-grid {
-      background-image: none;
-      // background-color: #ECEFF1;
-      overflow: hidden;
 
       .scrollable {
         overflow-y: auto;
@@ -103,7 +93,6 @@
 
       .container-grid {
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.25);
       }
 
       .o-app-grid-item {
@@ -143,52 +132,36 @@
     }
   }
 
-  .o-app-grid {
-    background-image: url('../assets/images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #242424;
-    height: 100%;
-    display: flex;
-    flex: 1 1 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: auto;
+  .o-app-grid-item {
+    height: 10em;
+    background: #ffffff;
+    border-radius: 4px;
+    margin: 8px;
+    cursor: pointer;
+    position: relative;
 
-    .o-app-grid-item {
-      height: 10em;
-      background: #ffffff;
-      border-radius: 4px;
-      margin: 8px;
-      cursor: pointer;
-      position: relative;
+    .o-app-grid-item-image {
+      height: 7em;
+      min-width: 205px;
+      margin: 14px 15px 0 14px;
+    }
 
-      .o-app-grid-item-image {
-        height: 7em;
-        min-width: 205px;
-        margin: 14px 15px 0 14px;
-      }
+    .github_button {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
 
-      .github_button {
-        position: absolute;
-        bottom: 4px;
-        right: 4px;
+      .mat-icon-button {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
 
-        .mat-icon-button {
-          width: 28px;
-          height: 28px;
-          line-height: 28px;
-
-          .mat-icon {
-            width: 22px;
-            height: 22px;
-          }
+        .mat-icon {
+          width: 22px;
+          height: 22px;
         }
-
       }
+
     }
   }
 }
