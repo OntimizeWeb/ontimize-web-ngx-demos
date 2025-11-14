@@ -18,13 +18,7 @@
   <img class="head-image" src="./assets/images/grupo-de-jovenes.jpg">
 </div>
 
-<!--Pendiente comprobar si es necesario el ngIf -->
-
-<o-grid attr="grid" *ngIf="dataArray.length" show-footer="no" insert-button-flotable="no" refresh-button="no" quick-filter="no" [static-data]="dataArray">
-  <o-grid-item *ngFor="let item of dataArray">
-    {{item.name}}
-  </o-grid-item>
-</o-grid>
+<section></section>
 
 <div class="o-app-grid" [ngSwitch]="selectedVersion?.version">
   <ng-container *ngSwitchCase="8">

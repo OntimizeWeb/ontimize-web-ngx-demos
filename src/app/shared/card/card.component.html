@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxFlex="45%">
+    <img src="{{img}}">
+    </div>
+    <div fxLayout="row">
+      <div fxLayout="column">
+        <mat-icon>{{icon}}</mat-icon>
+      </div>
+      <div fxLayout="column">
+        <span fxLayout="row" class="title">{{title}}</span>
+        <span fxLayout="row" class="subtitle">{{type}}</span>
+      </div>
+      <div fxLayout="column">
+        <mat-icon svgIcon="ontimize:github"></mat-icon>
+      </div>
+    </div>
+    <span fxLayout="row" class="description">{{description}}</span>
+    <o-button attr="button" type="FLAT" [label]=action layout-padding color="primary"></o-button>
+  </mat-card-content>
+</mat-card>
