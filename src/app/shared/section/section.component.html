@@ -1,4 +1,4 @@
 <span fxLayout="row" class="title">{{title}}</span>
-<div *ngFor="let item of data">
-  <card img="item.img" icon="item.icon" title="item.title" type="item.type" description="item.description" action="item.action"></card>
+<div fxLayout="row" fxLayoutGap="40px" *ngFor="let item of data">
+  <card [img]="item.img" [icon]="item.icon" [title]="item.title" [type]="item.type" [description]="item.description" [action]="item.action" [url]="item.url"></card>
 </div>

@@ -1,21 +1,21 @@
-<mat-card>
-  <mat-card-content>
-    <div fxLayout="row" fxFlex="45%">
-    <img src="{{img}}">
-    </div>
-    <div fxLayout="row">
-      <div fxLayout="column">
-        <mat-icon>{{icon}}</mat-icon>
+<mat-card class="card">
+  <mat-card-title>
+    <img [src]="'./assets/images/' + img">
+  </mat-card-title>
+  <mat-card-content fxLayout="column" fxLayoutGap="16px">
+    <div fxLayout="row" fxLayoutGap="12px">
+      <div fxLayout="column" fxLayoutAlign="center center" class="icon-bg">
+        <mat-icon class="icon" color="primary">{{icon}}</mat-icon>
       </div>
-      <div fxLayout="column">
+      <div fxLayout="column" fxFlex="50%">
         <span fxLayout="row" class="title">{{title}}</span>
         <span fxLayout="row" class="subtitle">{{type}}</span>
       </div>
-      <div fxLayout="column">
-        <mat-icon svgIcon="ontimize:github"></mat-icon>
+      <div fxLayout="column" fxLayoutAlign="start end" fxFlex>
+        <mat-icon class="github" svgIcon="ontimize:github"></mat-icon>
       </div>
     </div>
     <span fxLayout="row" class="description">{{description}}</span>
-    <o-button attr="button" type="FLAT" [label]=action layout-padding color="primary"></o-button>
+    <a mat-flat-button [href]=url color="primary">{{action}}</a>
   </mat-card-content>
 </mat-card>

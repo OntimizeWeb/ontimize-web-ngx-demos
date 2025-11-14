@@ -1,167 +1,161 @@
-.o-app {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  .github-button,
-  .github_button {
-    &.mat-mdc-button-base .mat-icon {
-      line-height: 1;
-    }
+.github-button,
+.github_button {
+  &.mat-mdc-button-base .mat-icon {
+    line-height: 1;
   }
+}
 
-  .toolbar-title {
-    margin-left: 32px;
-  }
+.toolbar-title {
+  margin-left: 32px;
+}
 
-  .ontimize-icon {
-    height: 25px;
-    width: 21px;
-  }
+.ontimize-icon {
+  height: 25px;
+  width: 21px;
+}
 
-  .title {
-    margin: 18px 0;
-  }
+.title {
+  margin: 18px 0;
+}
 
-  .head-image {
-    transform: scaleX(-1);
-    width: 100%;
-    object-fit: cover;
-    filter: grayscale(1);
-  }
+.head-image {
+  transform: scaleX(-1);
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
 
-  &.version8 {
 
-    .o-app-grid {
-      background-image: none;
-      background-color: #ECEFF1;
-      overflow: hidden;
 
-      .scrollable {
-        overflow-y: auto;
-      }
+  .o-app-grid {
+    background-image: none;
+    background-color: #ECEFF1;
+    overflow: hidden;
 
-      .container-grid {
-        height: 100%;
-      }
-
-      .o-app-grid-item {
-        box-shadow: 0 4px 4px #0000001A;
-        height: auto;
-        background: #ffffff;
-        margin: 24px;
-        padding: 16px;
-        cursor: default;
-
-        .github_button {
-          top: 4px;
-        }
-
-        .o-app-grid-item-image {
-          width: 64px;
-          min-width: auto;
-          max-width: auto;
-          margin: 0 90px;
-          height: auto;
-
-        }
-
-        .link-button {
-          background-color: #B9D1E4;
-          color: #0B488A;
-        }
-      }
+    .scrollable {
+      overflow-y: auto;
     }
 
-    .background {
-      background-image: url('../assets/images/backgroundv8.png');
-      background-color: #ECEFF1;
+    .container-grid {
       height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
+    }
+
+    .o-app-grid-item {
+      box-shadow: 0 4px 4px #0000001A;
+      height: auto;
+      background: #ffffff;
+      margin: 24px;
+      padding: 16px;
+      cursor: default;
+
+      .github_button {
+        top: 4px;
+      }
+
+      .o-app-grid-item-image {
+        width: 64px;
+        min-width: auto;
+        max-width: auto;
+        margin: 0 90px;
+        height: auto;
+
+      }
+
+      .link-button {
+        background-color: #B9D1E4;
+        color: #0B488A;
+      }
     }
   }
 
+  .background {
+    background-image: url('../assets/images/backgroundv8.png');
+    background-color: #ECEFF1;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-  &.version15 {
 
-    .o-app-grid {
 
-      .scrollable {
-        overflow-y: auto;
-      }
 
-      .container-grid {
-        height: 100%;
-      }
 
-      .o-app-grid-item {
-        box-shadow: 0 4px 4px #0000001A;
-        height: auto;
-        // background: #ffffff;
-        margin: 24px;
-        padding: 16px;
-        cursor: default;
+.o-app-grid {
 
-        .github_button {
-          top: 4px;
-        }
+  .scrollable {
+    overflow-y: auto;
+  }
 
-        .o-app-grid-item-image {
-          width: 64px;
-          min-width: auto;
-          max-width: auto;
-          margin: 0 90px;
-          height: auto;
-
-        }
-
-        .link-button {
-          background-color: #B9D1E4;
-          color: #0B488A;
-        }
-      }
-    }
-
-    .background {
-      background-image: url('../assets/images/backgroundv15.png');
-      // background-color: #ECEFF1;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+  .container-grid {
+    height: 100%;
   }
 
   .o-app-grid-item {
-    height: 10em;
-    background: #ffffff;
-    border-radius: 4px;
-    margin: 8px;
-    cursor: pointer;
-    position: relative;
-
-    .o-app-grid-item-image {
-      height: 7em;
-      min-width: 205px;
-      margin: 14px 15px 0 14px;
-    }
+    box-shadow: 0 4px 4px #0000001A;
+    height: auto;
+    // background: #ffffff;
+    margin: 24px;
+    padding: 16px;
+    cursor: default;
 
     .github_button {
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
+      top: 4px;
+    }
 
-      .mat-icon-button {
-        width: 28px;
-        height: 28px;
-        line-height: 28px;
-
-        .mat-icon {
-          width: 22px;
-          height: 22px;
-        }
-      }
+    .o-app-grid-item-image {
+      width: 64px;
+      min-width: auto;
+      max-width: auto;
+      margin: 0 90px;
+      height: auto;
 
     }
+
+    .link-button {
+      background-color: #B9D1E4;
+      color: #0B488A;
+    }
+  }
+}
+
+.background {
+  background-image: url('../assets/images/backgroundv15.png');
+  // background-color: #ECEFF1;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.o-app-grid-item {
+  height: 10em;
+  background: #ffffff;
+  border-radius: 4px;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+
+  .o-app-grid-item-image {
+    height: 7em;
+    min-width: 205px;
+    margin: 14px 15px 0 14px;
+  }
+
+  .github_button {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+
+    .mat-icon-button {
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+
+      .mat-icon {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
   }
 }

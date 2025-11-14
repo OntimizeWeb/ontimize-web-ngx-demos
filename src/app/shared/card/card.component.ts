@@ -16,9 +16,6 @@ export class CardComponent {
   @Input() type!: string;
   @Input() description!: string;
   @Input() action!: string;
+  @Input() url!: string;
 
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
-    this.matIconRegistry.addSvgIconInNamespace('ontimize', 'github',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/github.svg'));
-  }
 }

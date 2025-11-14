@@ -6,8 +6,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 @Component({
   selector: 'o-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 

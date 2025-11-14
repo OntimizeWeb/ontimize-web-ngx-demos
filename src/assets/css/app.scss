@@ -3,3 +3,11 @@
 
 /* Include ontimize styles */
 @include ontimize-style.ontimize-theme-styles(theme.$theme);
+@import '../../app/shared/card/card.theme.scss';
+
+
+@mixin app-themes($theme) {
+  @include card-theme($theme);
+}
+
+@include app-themes(theme.$theme);

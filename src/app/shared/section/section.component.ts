@@ -25,12 +25,14 @@ export class SectionComponent {
   constructor(
     protected injector: Injector,
     protected httpClient: HttpClient
-  ) {
-
-  }
+  ) { }
 
   ngOnInit(): void {
     this.getVersions().then(() => this.getDemos());
+  }
+
+  ngAfterViewInit() {
+    console.log(this.data);
   }
 
   getVersions(): Promise<any> {

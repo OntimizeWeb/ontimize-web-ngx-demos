@@ -1,98 +1,100 @@
-<mat-toolbar color="primary">
-  <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center" class="toolbar-title">
-    <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
-    <span class="title">Ontimize Web</span>
-  </div>
-  <button mat-button [matMenuTriggerFor]="versionPicker">
-    {{ selectedVersion?.title }}
-    <mat-icon>arrow_drop_down</mat-icon>
-  </button>
-  <mat-menu #versionPicker="matMenu">
-    <button mat-menu-item *ngFor="let version of ontimizeVersions" (click)="onVersionChanged(version)">{{ version.title
-      }}</button>
-  </mat-menu>
-  <o-button type="BASIC" label="GitHub" layout-padding svg-icon="ontimize:github" (click)="openGitHub()"></o-button>
-  <o-button type="BASIC" label="Docs" layout-padding image="./assets/images/logoGrisNegro.png" (click)=openDocs()></o-button>
-</mat-toolbar>
-<div fxLayout="row" fxFlex="540px">
-  <img class="head-image" src="./assets/images/grupo-de-jovenes.jpg">
-</div>
-
-<section></section>
-
-<div class="o-app-grid" [ngSwitch]="selectedVersion?.version">
-  <ng-container *ngSwitchCase="8">
-    <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
-      <div fxLayout="column" fxLayoutAlign="center center" class="container-grid">
-        <!-- Aquí usamos o-grid -->
-        <o-grid cols="4" gutter-size="16px" grid-item-height="260px" class="scrollable">
-          <o-grid-item *ngFor="let item of dataArray">
-            <div fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8" (click)="openTab(item.url)">
-
-              <img [src]="'./assets/images/' + item.icon" class="o-app-grid-item-image" />
-
-              <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex (click)="openTab(item.url)">
-                <span class="title" fxFlex>{{ item.description }}</span>
-              </div>
-
-              <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
-                <mat-icon svgIcon="ontimize:github"></mat-icon>
-              </button>
-            </div>
-          </o-grid-item>
-        </o-grid>
-      </div>
+<div fxLayout="column">
+  <mat-toolbar color="primary">
+    <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center" class="toolbar-title">
+      <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
+      <span class="title">Ontimize Web</span>
     </div>
-  </ng-container>
+    <button mat-button [matMenuTriggerFor]="versionPicker">
+      {{ selectedVersion?.title }}
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #versionPicker="matMenu">
+      <button mat-menu-item *ngFor="let version of ontimizeVersions" (click)="onVersionChanged(version)">{{ version.title
+        }}</button>
+    </mat-menu>
+    <o-button type="BASIC" label="GitHub" layout-padding svg-icon="ontimize:github" (click)="openGitHub()"></o-button>
+    <o-button type="BASIC" label="Docs" layout-padding image="./assets/images/logoGrisNegro.png" (click)=openDocs()></o-button>
+  </mat-toolbar>
+  <div fxLayout="row" fxFlex="540px">
+    <img class="head-image" src="./assets/images/grupo-de-jovenes.jpg">
+  </div>
 
-  <!-- Versión 15 -->
-  <ng-container *ngSwitchCase="15">
-    <div fxLayout="row" fxLayoutAlign="end center" fxFlexFill class="background">
+  <section></section>
 
-      <div fxLayout="column" fxLayoutAlign="center center" fxFlex.md="60%" fxFlex="50%" class="container-grid">
+  <div class="o-app-grid" [ngSwitch]="selectedVersion?.version">
+    <ng-container *ngSwitchCase="8">
+      <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
+        <div fxLayout="column" fxLayoutAlign="center center" class="container-grid">
+          <!-- Aquí usamos o-grid -->
+          <o-grid cols="4" gutter-size="16px" grid-item-height="260px" class="scrollable">
+            <o-grid-item *ngFor="let item of dataArray">
+              <div fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8" (click)="openTab(item.url)">
 
-        <o-grid cols="4" gutter-size="16px" grid-item-height="260px" class="scrollable">
-          <o-grid-item *ngFor="let item of dataArray">
-            <div fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8">
+                <img [src]="'./assets/images/' + item.icon" class="o-app-grid-item-image" />
 
-              <img [src]="'./assets/images/' + item.icon" class="o-app-grid-item-image" />
+                <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex (click)="openTab(item.url)">
+                  <span class="title" fxFlex>{{ item.description }}</span>
+                </div>
 
-              <div fxLayout="column" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex>
-                <span class="title" fxFlex>{{ item.description }}</span>
-                <button class="link-button" type="button" mat-button color="primary" (click)="openTab(item.url)">
-                  Acceder
+                <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
+                  <mat-icon svgIcon="ontimize:github"></mat-icon>
                 </button>
               </div>
-
-              <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
-                <mat-icon svgIcon="ontimize:github"></mat-icon>
-              </button>
-            </div>
-          </o-grid-item>
-        </o-grid>
-
-      </div>
-    </div>
-  </ng-container>
-
-  <!-- Versión default -->
-  <ng-container *ngSwitchDefault>
-    <o-grid cols="4" gutter-size="16px" grid-item-height="260px" class="scrollable">
-      <o-grid-item *ngFor="let item of dataArray">
-        <div fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8" (click)="openTab(item.url)">
-
-          <img [src]="'./assets/images/' + item.icon" class="o-app-grid-item-image" />
-
-          <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex (click)="openTab(item.url)">
-            <span class="title" fxFlex>{{ item.description }}</span>
-          </div>
-
-          <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
-            <mat-icon svgIcon="ontimize:github"></mat-icon>
-          </button>
+            </o-grid-item>
+          </o-grid>
         </div>
-      </o-grid-item>
-    </o-grid>
-  </ng-container>
+      </div>
+    </ng-container>
 
+    <!-- Versión 15 -->
+    <ng-container *ngSwitchCase="15">
+      <div fxLayout="row" fxLayoutAlign="end center" fxFlexFill class="background">
+
+        <div fxLayout="column" fxLayoutAlign="center center" fxFlex.md="60%" fxFlex="50%" class="container-grid">
+
+          <o-grid cols="4" gutter-size="16px" grid-item-height="260px" class="scrollable">
+            <o-grid-item *ngFor="let item of dataArray">
+              <div fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8">
+
+                <img [src]="'./assets/images/' + item.icon" class="o-app-grid-item-image" />
+
+                <div fxLayout="column" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex>
+                  <span class="title" fxFlex>{{ item.description }}</span>
+                  <button class="link-button" type="button" mat-button color="primary" (click)="openTab(item.url)">
+                    Acceder
+                  </button>
+                </div>
+
+                <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
+                  <mat-icon svgIcon="ontimize:github"></mat-icon>
+                </button>
+              </div>
+            </o-grid-item>
+          </o-grid>
+
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Versión default -->
+    <ng-container *ngSwitchDefault>
+      <o-grid cols="4" gutter-size="16px" grid-item-height="260px" class="scrollable">
+        <o-grid-item *ngFor="let item of dataArray">
+          <div fxLayout="column" fxLayoutAlign="stretch center" class="o-app-grid-item mat-elevation-z8" (click)="openTab(item.url)">
+
+            <img [src]="'./assets/images/' + item.icon" class="o-app-grid-item-image" />
+
+            <div fxLayout="row" fxLayoutAlign="center center" class="o-app-grid-item-bottom" fxFlex (click)="openTab(item.url)">
+              <span class="title" fxFlex>{{ item.description }}</span>
+            </div>
+
+            <button type="button" mat-icon-button color="accent" (click)="openTab(item.github, $event)" class="github_button">
+              <mat-icon svgIcon="ontimize:github"></mat-icon>
+            </button>
+          </div>
+        </o-grid-item>
+      </o-grid>
+    </ng-container>
+
+  </div>
 </div>
