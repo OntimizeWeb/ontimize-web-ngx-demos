@@ -30,10 +30,14 @@
   .title {
     margin-top: 30px;
   }
-
-
 }
 
 .o-button button.mat-mdc-unelevated-button .button-action{
   border-radius: 8px;
+}
+
+.cards-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }

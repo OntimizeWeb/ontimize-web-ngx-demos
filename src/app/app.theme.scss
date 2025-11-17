@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+@mixin app-theme($theme) {
+  $primary: map.get($theme, color, primary);
+  $background: map.get($theme, color, background);
+  $foreground: map.get($theme, color, foreground);
+  $typography: map-get($theme, typography);
+
+  .img-title {
+    font-size: mat.font-size($typography, headline-2);
+    color: mat.get-color-from-palette($background, level-1);
+  }
+
+  .img-content {
+    font-size: mat.font-size($typography, headline-3);
+    color: mat.get-color-from-palette($background, level-1);
+  }
+
+  .footer{
+    background-color: mat.get-color-from-palette($primary);
+    font-size:mat.font-size($typography, subtitle-1);
+    color: mat.get-color-from-palette($background, level-1);
+  }
+
+}

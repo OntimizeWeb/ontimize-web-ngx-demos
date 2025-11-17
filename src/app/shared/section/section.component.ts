@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, HostBinding, Injector, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: 'section',
@@ -9,51 +9,16 @@ import { Component, HostBinding, Injector, Input } from "@angular/core";
 
 export class SectionComponent {
 
-  @Input() title !: string;
-  public selectedVersion: any;
-  public ontimizeVersions: any[] = [];
-  public data: any[] = [];
-
-  @HostBinding('class') get classes(): string {
-    let className = 'section';
-    if (this.selectedVersion) {
-      className += ('version' + this.selectedVersion.version);
-    }
-    return className;
-  };
+  @Input() version !: number;
+  public demos: any[] = [];
+  public components: any[] = [];
 
   constructor(
-    protected injector: Injector,
     protected httpClient: HttpClient
   ) { }
 
-  ngOnInit(): void {
-    this.getVersions().then(() => this.getDemos());
-  }
-
-  ngAfterViewInit() {
-    console.log(this.data);
-  }
-
-  getVersions(): Promise<any> {
-    const self = this;
-    return new Promise((resolve, reject) => {
-      this.httpClient.get('./assets/data/versions.json').subscribe(
-        (response) => {
-          if (response && Array.isArray(response)) {
-            self.ontimizeVersions = response;
-            self.selectedVersion = self.ontimizeVersions[0];
-            resolve(true);
-          } else {
-            reject();
-          }
-        },
-        error => {
-          console.log(error);
-          reject();
-        }
-      )
-    });
+  ngOnChanges(): void{
+    this.getDemos();
   }
 
   getDemos(): void {
@@ -61,24 +26,19 @@ export class SectionComponent {
     this.httpClient.get('./assets/data/demos.json').subscribe(
       (response) => {
         if (response && Array.isArray(response)) {
-          self.data = response.filter((item: any) => item.version === self.selectedVersion.version)
+          self.demos = response.filter((item: any) => item.version === self.version)
+        }
+      },
+      error => console.log(error)
+    );
+    this.httpClient.get('./assets/data/components.json').subscribe(
+      (response) => {
+        if (response && Array.isArray(response)) {
+          self.components = response.filter((item: any) => item.version === self.version)
         }
       },
       error => console.log(error)
     );
   }
-
-  onVersionChanged(arg: any): void {
-    this.selectedVersion = arg;
-    this.getDemos();
-  }
-
-  openTab(url: string, e?: Event): void {
-    if (e) {
-      e.stopPropagation();
-    }
-    window.open(url, "_blank");
-  }
-
 
 }

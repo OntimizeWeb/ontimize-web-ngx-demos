@@ -4,10 +4,14 @@
 /* Include ontimize styles */
 @include ontimize-style.ontimize-theme-styles(theme.$theme);
 @import '../../app/shared/card/card.theme.scss';
+@import '../../app/shared/section/section.theme.scss';
+@import '../../app/app.theme.scss';
 
 
 @mixin app-themes($theme) {
   @include card-theme($theme);
+  @include section-theme($theme);
+  @include app-theme($theme);
 }
 
 @include app-themes(theme.$theme);

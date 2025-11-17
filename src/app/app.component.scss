@@ -11,9 +11,27 @@
   margin: 18px 0;
 }
 
-.head-image {
+.header {
+  background-image: linear-gradient(rgba(20, 100, 165, 0.6), rgba(24, 114, 189, 0.4)), url("/assets/images/grupo-de-jovenes.jpg");
+  background-position: center;
+  background-size: cover;
   transform: scaleX(-1);
-  width: 100%;
-  object-fit: cover;
-  filter: grayscale(1);
+}
+
+.img-content {
+  margin: 0px 132px 24px 132px;
+  transform: scaleX(-1);
+}
+
+.img-title {
+  margin: 48px 132px 24px 132px;
+  transform: scaleX(-1);
+}
+
+.cards{
+  margin: 0px 320px 48px 320px;
+}
+
+.footer{
+  height: 56px;
 }

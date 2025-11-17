@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+@mixin section-theme($theme) {
+  $primary: map.get($theme, color, primary);
+  $background: map.get($theme, color, background);
+  $foreground: map.get($theme, color, foreground);
+  $typography: map-get($theme, typography);
+
+  .cards-title {
+    font-size: mat.font-size($typography, headline-5);
+    color: mat.get-color-from-palette($foreground, text);
+  }
+
+}

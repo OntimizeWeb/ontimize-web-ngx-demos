@@ -15,8 +15,13 @@
     <o-button type="BASIC" label="GitHub" layout-padding svg-icon="ontimize:github" (click)="openGitHub()"></o-button>
     <o-button type="BASIC" label="Docs" layout-padding image="./assets/images/logoGrisNegro.png" (click)=openDocs()></o-button>
   </mat-toolbar>
-  <div fxLayout="row" fxFlex="540px">
-    <img class="head-image" src="./assets/images/grupo-de-jovenes.jpg">
+  <div fxLayout="column" fxFlex="300px" class="header">
+    <p class="img-title">Demos y componentes Ontimize Web</p>
+    <span class="img-content">Descubre nuestras demos y prueba los componentes de Ontimize web. Explora cómo funcionan y cómo integrarlos a tus
+      proyectos.</span>
   </div>
-  <section></section>
+  <section class="cards" [version]="selectedVersion?.version"></section>
+  <div class="footer" fxLayoutAlign="center center">
+    <span>© 2025 Ontimize. Todas las demos y componentes diseñados por Ontimize.</span>
+  </div>
 </div>

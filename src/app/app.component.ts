@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostBinding, Injector, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
@@ -12,15 +12,6 @@ export class AppComponent implements OnInit {
 
   public selectedVersion: any;
   public ontimizeVersions: any[] = [];
-  public dataArray: any[] = [];
-
-  @HostBinding('class') get classes(): string {
-    let className = 'o-app ';
-    if (this.selectedVersion) {
-      className += ('version' + this.selectedVersion.version);
-    }
-    return className;
-  };
 
   constructor(
     protected injector: Injector,
@@ -33,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getVersions().then(() => this.getDemos());
+    this.getVersions();
   }
 
   getVersions(): Promise<any> {
@@ -57,28 +48,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getDemos(): void {
-    const self = this;
-    this.httpClient.get('./assets/data/demos.json').subscribe(
-      (response) => {
-        if (response && Array.isArray(response)) {
-          self.dataArray = response.filter((item: any) => item.version === self.selectedVersion.version)
-        }
-      },
-      error => console.log(error)
-    );
-  }
-
-  onVersionChanged(arg: any): void {
-    this.selectedVersion = arg;
-    this.getDemos();
-  }
-
-  openTab(url: string, e?: Event): void {
-    if (e) {
-      e.stopPropagation();
-    }
-    window.open(url, "_blank");
+  onVersionChanged(version: any): void {
+    this.selectedVersion = version;
   }
 
   openDocs() {
@@ -88,9 +59,5 @@ export class AppComponent implements OnInit {
   openGitHub() {
     window.open("https://github.com/OntimizeWeb/ontimize-web-ngx");
   }
-
-
-
-
 
 }

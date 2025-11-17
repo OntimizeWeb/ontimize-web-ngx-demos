@@ -10,12 +10,6 @@ import { DomSanitizer } from "@angular/platform-browser";
 
 export class CardComponent {
 
-  @Input() img!: string;
-  @Input() icon!: string;
-  @Input() title!: string;
-  @Input() type!: string;
-  @Input() description!: string;
-  @Input() action!: string;
-  @Input() url!: string;
+  @Input() data!: [];
 
 }
