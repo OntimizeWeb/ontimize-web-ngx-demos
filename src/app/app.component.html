@@ -1,5 +1,5 @@
-<div fxLayout="column">
-  <mat-toolbar color="primary">
+<div fxLayout="column" fxFlex="100">
+  <mat-toolbar color="primary" class="toolbar">
     <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center" class="toolbar-title">
       <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
       <span class="title">Ontimize Web</span>
@@ -15,7 +15,7 @@
     <o-button type="BASIC" label="GitHub" layout-padding svg-icon="ontimize:github" (click)="openGitHub()"></o-button>
     <o-button type="BASIC" label="Docs" layout-padding image="./assets/images/logoGrisNegro.png" (click)=openDocs()></o-button>
   </mat-toolbar>
-  <div fxLayout="column" fxFlex="300px" class="header">
+  <div fxLayout="column" fxFlex="200px" class="header">
     <p class="img-title">Demos y componentes Ontimize Web</p>
     <span class="img-content">Descubre nuestras demos y prueba los componentes de Ontimize web. Explora cómo funcionan y cómo integrarlos a tus
       proyectos.</span>

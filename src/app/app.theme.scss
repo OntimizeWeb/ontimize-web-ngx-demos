@@ -8,12 +8,12 @@
   $typography: map-get($theme, typography);
 
   .img-title {
-    font-size: mat.font-size($typography, headline-2);
+    font-size: mat.font-size($typography, headline-4);
     color: mat.get-color-from-palette($background, level-1);
   }
 
   .img-content {
-    font-size: mat.font-size($typography, headline-3);
+    font-size: mat.font-size($typography, headline-6);
     color: mat.get-color-from-palette($background, level-1);
   }
 

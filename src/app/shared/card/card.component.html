@@ -1,10 +1,10 @@
-<div class="cards-list" >
+<div class="cards-list">
   <mat-card class="card" *ngFor="let item of data">
     <mat-card-title>
       <img [src]="'./assets/images/' + item.img">
     </mat-card-title>
-    <mat-card-content fxLayout="column" fxLayoutGap="16px">
-      <div fxLayout="row" fxLayoutGap="12px">
+    <mat-card-content fxLayout="column" fxFlex="100" fxLayoutGap="12px">
+      <div fxLayout="row" fxLayoutGap="12px" class="card-title">
         <div fxLayout="column" fxLayoutAlign="center center" class="icon-bg">
           <mat-icon class="icon" color="primary">{{item.icon}}</mat-icon>
         </div>
@@ -12,11 +12,11 @@
           <span fxLayout="row" class="title">{{item.title}}</span>
           <span fxLayout="row" class="subtitle">{{item.type}}</span>
         </div>
-        <div fxLayout="column" fxLayoutAlign="start end" fxFlex>
+        <div fxLayout="column" fxLayoutAlign="center end" fxFlex>
           <mat-icon class="github" svgIcon="ontimize:github"></mat-icon>
         </div>
       </div>
-      <span fxLayout="row" class="description">{{item.description}}</span>
+      <span fxLayout="row" fxFlex="42px" class="description">{{item.description}}</span>
       <a mat-flat-button [href]=item.url color="primary">{{item.action}}</a>
     </mat-card-content>
   </mat-card>

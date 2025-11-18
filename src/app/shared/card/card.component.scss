@@ -1,6 +1,6 @@
 .card {
   width: 400px;
-  height: 400px;
+  height: 360px;
   border-radius: 14px;
 
   img {
@@ -10,34 +10,43 @@
     border-top-right-radius: 14px;
   }
 
+  .card-title {
+    margin-top: 8px;
+    align-items: center;
+  }
+
   .icon-bg {
     height: 36px;
     width: 36px;
     border-radius: 10px;
-    margin-top: 32px;
   }
 
   .icon {
     height: 16px;
     width: 16px;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
   }
 
   .github {
     padding: 8px;
   }
 
-  .title {
-    margin-top: 30px;
-  }
 }
 
-.o-button button.mat-mdc-unelevated-button .button-action{
+.o-button button.mat-mdc-unelevated-button .button-action {
   border-radius: 8px;
 }
 
-.cards-list{
+.cards-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+
+@media (max-width: 1919px) {
+  .cards-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
