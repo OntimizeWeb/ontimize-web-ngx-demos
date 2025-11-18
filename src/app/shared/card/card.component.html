@@ -13,11 +13,13 @@
           <span fxLayout="row" class="subtitle">{{item.type}}</span>
         </div>
         <div fxLayout="column" fxLayoutAlign="center end" fxFlex>
-          <mat-icon class="github" svgIcon="ontimize:github"></mat-icon>
+          <a [href]="item.github" target="_blank">
+            <mat-icon class="github" svgIcon="ontimize:github"></mat-icon>
+          </a>
         </div>
       </div>
       <span fxLayout="row" fxFlex="42px" class="description">{{item.description}}</span>
-      <a mat-flat-button [href]=item.url color="primary">{{item.action}}</a>
+      <a mat-flat-button [href]=item.url target="_blank" color="primary">{{item.action}}</a>
     </mat-card-content>
   </mat-card>
 </div>

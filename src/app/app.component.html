@@ -1,27 +1,27 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center" class="toolbar-title">
+    <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
+    <span class="title">Ontimize Web</span>
+  </div>
+  <button mat-button [matMenuTriggerFor]="versionPicker">
+    {{ selectedVersion?.title }}
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #versionPicker="matMenu">
+    <button mat-menu-item *ngFor="let version of ontimizeVersions" (click)="onVersionChanged(version)">{{ version.title
+      }}</button>
+  </mat-menu>
+  <o-button type="BASIC" label="GitHub" layout-padding svg-icon="ontimize:github" (click)="openGitHub()"></o-button>
+  <o-button type="BASIC" label="Docs" layout-padding image="./assets/images/logoGrisNegro.png" (click)=openDocs()></o-button>
+</mat-toolbar>
 <div fxLayout="column" fxFlex="100">
-  <mat-toolbar color="primary" class="toolbar">
-    <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center" class="toolbar-title">
-      <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
-      <span class="title">Ontimize Web</span>
-    </div>
-    <button mat-button [matMenuTriggerFor]="versionPicker">
-      {{ selectedVersion?.title }}
-      <mat-icon>arrow_drop_down</mat-icon>
-    </button>
-    <mat-menu #versionPicker="matMenu">
-      <button mat-menu-item *ngFor="let version of ontimizeVersions" (click)="onVersionChanged(version)">{{ version.title
-        }}</button>
-    </mat-menu>
-    <o-button type="BASIC" label="GitHub" layout-padding svg-icon="ontimize:github" (click)="openGitHub()"></o-button>
-    <o-button type="BASIC" label="Docs" layout-padding image="./assets/images/logoGrisNegro.png" (click)=openDocs()></o-button>
-  </mat-toolbar>
   <div fxLayout="column" fxFlex="200px" class="header">
-    <p class="img-title">Demos y componentes Ontimize Web</p>
-    <span class="img-content">Descubre nuestras demos y prueba los componentes de Ontimize web. Explora cómo funcionan y cómo integrarlos a tus
-      proyectos.</span>
+    <p class="img-title">Ontimize Web demos and components</p>
+    <span class="img-content">Discover our demos and try Ontimize Web components. Explore how they work and how to integrate them into your
+      projects.</span>
   </div>
   <section class="cards" [version]="selectedVersion?.version"></section>
   <div class="footer" fxLayoutAlign="center center">
-    <span>© 2025 Ontimize. Todas las demos y componentes diseñados por Ontimize.</span>
+    <span>© 2025 Ontimize. All demos and components designed by Ontimize.</span>
   </div>
 </div>
