@@ -7,15 +7,6 @@
   $foreground: map.get($theme, color, foreground);
   $typography: map-get($theme, typography);
 
-  .img-title {
-    font-size: mat.font-size($typography, headline-4);
-    color: mat.get-color-from-palette($background, level-1);
-  }
-
-  .img-content {
-    font-size: mat.font-size($typography, headline-6);
-    color: mat.get-color-from-palette($background, level-1);
-  }
 
   .footer{
     background-color: mat.get-color-from-palette($primary);

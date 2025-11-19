@@ -11,5 +11,6 @@ import { DomSanitizer } from "@angular/platform-browser";
 export class CardComponent {
 
   @Input() data!: [];
+  @Input() version!: number;
 
 }

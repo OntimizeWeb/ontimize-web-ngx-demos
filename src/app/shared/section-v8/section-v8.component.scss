@@ -1,3 +1,15 @@
+.content {
+  margin-top: 64px;
+}
+
+.scrollable {
+  overflow-y: auto;
+}
+
+.cards {
+  margin: 0 15% 5% 15%;
+}
+
 .cards-title {
   margin-top: 30px;
   margin-bottom: 30px
@@ -11,6 +23,5 @@
   background: linear-gradient(to bottom,
       #5B93C0,
       #125C9D,
-      #063679
-    );
+      #063679);
 }

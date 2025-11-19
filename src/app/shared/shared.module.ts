@@ -1,7 +1,8 @@
 
 import { NgModule } from '@angular/core';
 import { CardComponent } from './card/card.component';
-import { SectionComponent } from './section/section.component';
+import { SectionV15Component } from './section-v15/section-v15.component';
+import { SectionV8Component } from './section-v8/section-v8.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
@@ -13,11 +14,13 @@ import { OntimizeWebModule } from 'ontimize-web-ngx';
   ],
   declarations: [
     CardComponent,
-    SectionComponent
+    SectionV15Component,
+    SectionV8Component
   ],
   exports: [
     CardComponent,
-    SectionComponent,
+    SectionV15Component,
+    SectionV8Component,
     MatCardModule,
     MatIconModule,
     OntimizeWebModule

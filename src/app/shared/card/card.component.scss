@@ -45,8 +45,17 @@
   gap: 40px;
 }
 
+.cards-v8 {
+  grid-template-columns: 1fr;
+  overflow-y: scroll;
+}
+
 @media (max-width: 1919px) {
   .cards-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-v8 {
+    grid-template-columns: 1fr;
   }
 }
