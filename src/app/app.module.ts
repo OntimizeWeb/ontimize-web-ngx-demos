@@ -7,14 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
-import {
-  APP_CONFIG,
-  ONTIMIZE_PROVIDERS,
-  OntimizeWebModule
-} from 'ontimize-web-ngx';
-
-import { CONFIG } from './app.config';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -24,14 +16,7 @@ import { CONFIG } from './app.config';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    SharedModule,
-    OntimizeWebModule,
-    OntimizeWebModule.forRoot(CONFIG)
-
-  ],
-  providers: [
-    { provide: APP_CONFIG, useValue: CONFIG },
-    ...ONTIMIZE_PROVIDERS
+    SharedModule
   ],
   bootstrap: [AppComponent]
 })

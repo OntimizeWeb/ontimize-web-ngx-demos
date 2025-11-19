@@ -1,17 +1,7 @@
-@use 'node_modules/ontimize-web-ngx/theming/themes/ontimize.scss' as theme;
-@use 'node_modules/ontimize-web-ngx/theming/ontimize-style.scss';
+@use '@angular/material' as mat;
+@use "sass:map";
+@include mat.core();
 
-/* Include ontimize styles */
-@include ontimize-style.ontimize-theme-styles(theme.$theme);
-@import '../../app/shared/card/card.theme.scss';
-@import '../../app/shared/section-v15/section-v15.theme.scss';
-@import '../../app/app.theme.scss';
+@import './ontimize.scss';
 
-
-@mixin app-themes($theme) {
-  @include card-theme($theme);
-  @include section-v15-theme($theme);
-  @include app-theme($theme);
-}
-
-@include app-themes(theme.$theme);
+@include mat.all-component-themes($theme-ontimize);

@@ -26,8 +26,7 @@
             ],
             "styles": [
               "src/assets/css/app.scss",
-              "src/styles.scss",
-              "node_modules/ontimize-web-ngx/ontimize.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
