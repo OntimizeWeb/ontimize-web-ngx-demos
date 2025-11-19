@@ -1,7 +1,14 @@
 @use '@angular/material' as mat;
-@use "sass:map";
+@use 'sass:map';
+
 @include mat.core();
 
 @import './ontimize.scss';
 
-@include mat.all-component-themes($theme-ontimize);
+$my-typography: mat.define-typography-config($font-family: 'Poppins, sans-serif'
+  );
+
+$my-theme: map.merge($theme-ontimize,
+    (typography: $my-typography ));
+
+@include mat.all-component-themes($my-theme);

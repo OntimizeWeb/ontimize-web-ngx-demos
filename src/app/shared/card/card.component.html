@@ -8,7 +8,7 @@
         <div fxLayout="column" fxLayoutAlign="center center" class="icon-bg">
           <mat-icon class="icon" color="primary">{{item.icon}}</mat-icon>
         </div>
-        <div fxLayout="column" fxFlex="50%">
+        <div fxLayout="column" fxFlex="60%">
           <span fxLayout="row" class="title">{{item.title}}</span>
           <span fxLayout="row" class="subtitle">{{item.type}}</span>
         </div>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <span fxLayout="row" fxFlex="42px" class="description">{{item.description}}</span>
-      <a mat-flat-button [href]=item.url target="_blank" color="primary">{{item.action}}</a>
+      <a mat-flat-button class="button-action" [href]=item.url target="_blank" color="primary">{{item.action}}</a>
     </mat-card-content>
   </mat-card>
 </div>

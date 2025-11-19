@@ -3,7 +3,7 @@
     <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
     <span class="title">Ontimize Web</span>
   </div>
-  <button mat-button [matMenuTriggerFor]="versionPicker">
+  <button mat-button class="version-button" [matMenuTriggerFor]="versionPicker">
     {{ selectedVersion?.title }}
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
@@ -11,19 +11,17 @@
     <button mat-menu-item *ngFor="let version of ontimizeVersions" (click)="onVersionChanged(version)">{{ version.title
       }}</button>
   </mat-menu>
-<a mat-button href="https://github.com/OntimizeWeb/ontimize-web-ngx" aria-label="GitHub Repository" target="_blank" class="github-button">
-  <mat-icon svgIcon="ontimize:github"></mat-icon>
-  <span>GitHub</span>
-</a>
-<a mat-button href="https://ontimizeweb.github.io/docs/v{{selectedVersion?.version}}" aria-label="OntimizeWeb Docs" target="_blank">
-  <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png" matButtonIcon>
-  &nbsp;<span>Docs</span>
-</a>
+  <a mat-button href="https://github.com/OntimizeWeb/ontimize-web-ngx" aria-label="GitHub Repository" target="_blank" class="github-button">
+    <mat-icon class="github-icon" svgIcon="ontimize:github"></mat-icon>
+    <span>GitHub</span>
+  </a>
+  <a mat-button href="https://ontimizeweb.github.io/docs/v{{selectedVersion?.version}}" aria-label="OntimizeWeb Docs" target="_blank">
+    <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png" matButtonIcon>
+    &nbsp;<span>Docs</span>
+  </a>
 </mat-toolbar>
-<div fxLayout="column" fxFlex="100">
-  <section-v8 *ngIf="selectedVersion?.version === 8"></section-v8>
-  <section-v15 *ngIf="selectedVersion?.version === 15"></section-v15>
-  <div class="footer" fxLayoutAlign="center center">
-    <span>© 2025 Ontimize. All demos and components designed by Ontimize.</span>
-  </div>
+<section-v8 *ngIf="selectedVersion?.version === 8"></section-v8>
+<section-v15 *ngIf="selectedVersion?.version === 15"></section-v15>
+<div class="footer" fxLayoutAlign="center center">
+  <span>© 2025 Ontimize. All demos and components designed by Ontimize.</span>
 </div>
