@@ -4,21 +4,37 @@
   left: 0;
   right: 0;
   z-index: 1000;
-}
 
-.toolbar-title {
-  margin-left: 32px;
-}
 
-.ontimize-icon {
-  height: 25px;
-  width: 21px;
-}
+  .toolbar-title {
+    margin-left: 32px;
 
-.title {
-  margin: 18px 0;
+    .title {
+      margin: 18px 0;
+      font-size: 16px;
+    }
+  }
+
+  .version-button {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .ontimize-icon {
+    height: 25px;
+    width: 21px;
+  }
+
+  .github-icon {
+    font-size: 24px;
+    height: 25px;
+    width: 24px;
+  }
 }
 
 .footer {
   height: 56px;
+  color: #ffffff;
+  background-color: #1464A5;
+  font-size: 14px;
 }
