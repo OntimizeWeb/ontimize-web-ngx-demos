@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
   public selectedVersion: any;
   public ontimizeVersions: any[] = [];
+  public currentYear: number = new Date().getFullYear();
 
   constructor(
     protected injector: Injector,

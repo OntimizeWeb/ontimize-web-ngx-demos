@@ -1,5 +1,16 @@
+:host {
+  display: block;
+  height: 100%; // ocupa todo el hueco que le da .content
+  min-height: 0; // importante en layouts flex
+}
+
+.section-v15 {
+  height: 100%;
+  overflow-y: auto;
+  min-height: 0;
+}
+
 .header {
-  margin-top: 64px;
   background-image: linear-gradient(rgba(20, 100, 165, 0.6), rgba(24, 114, 189, 0.4)), url("/assets/images/grupo-de-jovenes.jpg");
   background-position: center;
   background-size: cover;
@@ -7,7 +18,7 @@
   height: 200px;
 
   .img-title {
-    padding: 48px 132px 0px 132px;
+    padding: 48px 132px 16px 132px;
     transform: scaleX(-1);
     font-weight: 500;
     font-style: Medium;
@@ -15,6 +26,7 @@
     line-height: 32px;
     letter-spacing: 0.7px;
     color: white;
+    margin: 0;
   }
 
   .img-content {
@@ -46,7 +58,7 @@
 
     .title-group {
       color: #000000DE;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 500;
       line-height: 30px;
     }

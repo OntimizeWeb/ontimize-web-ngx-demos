@@ -20,8 +20,10 @@
     &nbsp;<span>Docs</span>
   </a>
 </mat-toolbar>
-<section-v8 *ngIf="selectedVersion?.version === 8"></section-v8>
-<section-v15 *ngIf="selectedVersion?.version === 15"></section-v15>
-<div class="footer" fxLayoutAlign="center center">
-  <span>© 2025 Ontimize. All demos and components designed by Ontimize.</span>
+<div class="page">
+  <section-v8 *ngIf="selectedVersion?.version === 8"></section-v8>
+  <section-v15 *ngIf="selectedVersion?.version === 15"></section-v15>
+  <div class="footer" fxLayoutAlign="center center">
+    <span>© {{currentYear}} Ontimize. All demos and components designed by Ontimize.</span>
+  </div>
 </div>
