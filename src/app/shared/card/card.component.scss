@@ -76,7 +76,8 @@
 @media (max-width: 1919px) {
 
   .cards-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 400px);
+    justify-content: space-between;
   }
 }
 
