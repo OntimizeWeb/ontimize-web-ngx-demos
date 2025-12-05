@@ -1,0 +1,98 @@
+[
+  {
+    "id": "playground8",
+    "title": "Playground",
+    "img": "playground.png",
+    "type": "Components",
+    "description": "Interactive space to explore the component library.",
+    "icon": "widgets",
+    "url": "https://try.imatia.com/ontimizeweb/v8/playground/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
+    "action": "Explore",
+    "version": 8
+  },
+  {
+    "id": "charts8",
+    "title": "Charts",
+    "img": "charts.png",
+    "type": "Components",
+    "description": "Explore different chart types and configurations.",
+    "icon": "bar_chart",
+    "url": "https://try.imatia.com/ontimizeweb/v8/charts/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
+    "action": "Explore",
+    "version": 8
+  },
+  {
+    "id": "map8",
+    "title": "Map",
+    "img": "map.png",
+    "type": "Components",
+    "description": "Examples of maps and geolocation tools.",
+    "icon": "map",
+    "url": "https://try.imatia.com/ontimizeweb/v8/map/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
+    "action": "Explore",
+    "version": 8
+  },
+  {
+    "id": "tree8",
+    "title": "Tree",
+    "img": "tree.png",
+    "type": "Components",
+    "description": "Explore different examples of our tree view.",
+    "icon": "lan",
+    "url": "https://try.imatia.com/ontimizeweb/v8/tree/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-tree",
+    "action": "Explore",
+    "version": 8
+  },
+  {
+    "id": "template15",
+    "title": "Template Manager",
+    "img": "template-manager.png",
+    "type": "Components",
+    "description": "Browse templates with usage examples and code snippets.",
+    "icon": "code",
+    "url": "https://ontimize-web-template-manager.ontimize.com/main/templates",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-template-manager",
+    "action": "Explore",
+    "version": 15
+  },
+  {
+    "id": "playground15",
+    "title": "Playground",
+    "img": "playground.png",
+    "type": "Components",
+    "description": "Interactive space to explore the component library.",
+    "icon": "widgets",
+    "url": "https://try.imatia.com/ontimizeweb/v15/playground/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
+    "action": "Explore",
+    "version": 15
+  },
+  {
+    "id": "charts15",
+    "title": "Charts",
+    "img": "charts.png",
+    "type": "Components",
+    "description": "Explore different chart types and configurations.",
+    "icon": "bar_chart",
+    "url": "https://try.imatia.com/ontimizeweb/v15/charts/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
+    "action": "Explore",
+    "version": 15
+  },
+  {
+    "id": "map15",
+    "title": "Map",
+    "img": "map.png",
+    "type": "Components",
+    "description": "Examples of maps and geolocation tools.",
+    "icon": "map",
+    "url": "https://try.imatia.com/ontimizeweb/v15/map/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
+    "action": "Explore",
+    "version": 15
+  }
+]

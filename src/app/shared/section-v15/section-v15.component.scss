@@ -1,0 +1,66 @@
+:host {
+  display: block;
+  height: 100%; // ocupa todo el hueco que le da .content
+  min-height: 0; // importante en layouts flex
+}
+
+.section-v15 {
+  height: 100%;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.header {
+  background-image: linear-gradient(rgba(20, 100, 165, 0.6), rgba(24, 114, 189, 0.4)), url("/assets/images/grupo-de-jovenes.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: scaleX(-1);
+  height: 200px;
+
+  .img-title {
+    padding: 48px 132px 16px 132px;
+    transform: scaleX(-1);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.7px;
+    color: white;
+    margin: 0;
+  }
+
+  .img-content {
+    padding: 0px 132px 24px 132px;
+    display: flex;
+    transform: scaleX(-1);
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.cards {
+  margin: 0 15% 5% 15%;
+
+  .cards-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .blue-bar {
+      width: 48px;
+      height: 8px;
+      border-radius: 33554400px;
+
+      background: linear-gradient(to bottom,
+          #5B93C0,
+          #125C9D,
+          #063679);
+    }
+
+    .title-group {
+      color: #000000DE;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+}

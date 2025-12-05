@@ -1,0 +1,88 @@
+.card {
+  width: 400px;
+  height: 360px;
+  border-radius: 14px;
+
+  img {
+    height: 184px;
+    width: 400px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+  }
+
+  .card-title {
+    margin-top: 8px;
+    align-items: center;
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #000000DE;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: #000000BD;
+    }
+  }
+
+  .description {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000A3
+  }
+
+  .icon-bg {
+    height: 36px;
+    width: 36px;
+    border-radius: 10px;
+    background-color: #1464A51A;
+  }
+
+  .icon {
+    height: 16px;
+    width: 16px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .github {
+    padding: 8px;
+    color: #6B7280;
+  }
+
+  .button-action {
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.cards-v8 {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 1919px) {
+
+  .cards-list {
+    grid-template-columns: repeat(2, 400px);
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 949px) {
+  .cards-list {
+    grid-template-columns: 1fr;
+  }
+}

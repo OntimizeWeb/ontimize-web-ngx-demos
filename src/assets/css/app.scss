@@ -1,21 +1,14 @@
-@use '@angular/material'as mat;
-@use "sass:map";
+@use '@angular/material' as mat;
+@use 'sass:map';
+
 @include mat.core();
 
 @import './ontimize.scss';
 
+$my-typography: mat.define-typography-config($font-family: 'Poppins, sans-serif'
+  );
 
-@include mat.all-component-themes($theme-ontimize);
+$my-theme: map.merge($theme-ontimize,
+    (typography: $my-typography ));
 
-.o-app.version15 {
-  .title {
-    $primary: map.get($theme-ontimize, color, primary);
-    color: mat.get-color-from-palette($primary);
-    font-weight: bold;
-  }
-}
-
-.o-app.version4 {
-  @import './ontimize-black-yellow.scss';
-  @include mat.all-component-colors($theme-black-yellow);
-}
+@include mat.all-component-themes($my-theme);

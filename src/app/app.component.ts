@@ -1,31 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostBinding, Injector, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'o-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   public selectedVersion: any;
   public ontimizeVersions: any[] = [];
-  public dataArray: any[] = [];
-  public color = 'primary'
-
-  @HostBinding('class') get classes(): string {
-    let className = 'o-app ';
-    if (this.selectedVersion) {
-      className += ('version' + this.selectedVersion.version);
-      if (this.selectedVersion.version === 15) {
-        this.color = '';
-      }
-    }
-    return className;
-  };
+  public currentYear: number = new Date().getFullYear();
 
   constructor(
     protected injector: Injector,
@@ -35,8 +22,10 @@ export class AppComponent {
   ) {
     this.matIconRegistry.addSvgIconInNamespace('ontimize', 'github',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/github.svg'));
+  }
 
-    this.getVersions().then(() => this.getDemos());
+  ngOnInit(): void {
+    this.getVersions();
   }
 
   getVersions(): Promise<any> {
@@ -48,8 +37,9 @@ export class AppComponent {
             self.ontimizeVersions = response;
             self.selectedVersion = self.ontimizeVersions[0];
             resolve(true);
+          } else {
+            reject();
           }
-          reject();
         },
         error => {
           console.log(error);
@@ -59,30 +49,16 @@ export class AppComponent {
     });
   }
 
-  getDemos(): void {
-    const self = this;
-    this.httpClient.get('./assets/data/demos.json').subscribe(
-      (response) => {
-        if (response && Array.isArray(response)) {
-          self.dataArray = response.filter((item: any) => item.version === self.selectedVersion.version)
-        }
-      },
-      error => console.log(error)
-    );
+  onVersionChanged(version: any): void {
+    this.selectedVersion = version;
   }
 
-  onVersionChanged(arg: any): void {
-    this.selectedVersion = arg;
-    this.getDemos();
+  openDocs() {
+    window.open("https://ontimizeweb.github.io/docs/v" + this.selectedVersion.version);
   }
 
-  openTab(url: string, e?: Event): void {
-    if (e) {
-      e.stopPropagation();
-    }
-    window.open(url, "_blank");
+  openGitHub() {
+    window.open("https://github.com/OntimizeWeb/ontimize-web-ngx");
   }
-
-
 
 }

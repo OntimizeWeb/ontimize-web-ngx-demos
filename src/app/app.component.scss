@@ -1,210 +1,47 @@
-.o-app {
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
-  .github-button,
-  .github_button {
-    &.mat-mdc-button-base .mat-icon {
-      line-height: 1;
+  .toolbar-title {
+    margin-left: 32px;
+
+    .title {
+      margin: 18px 0;
+      font-size: 16px;
     }
   }
 
-  &.version8 {
-
-    button,
-    html,
-    input,
-    select,
-    span,
-    textarea {
-      font-family: Poppins, "Helvetica Neue", sans-serif;
-    }
-
-    .mat-toolbar.mat-primary {
-      background-color: transparent;
-      color: #707070;
-    }
-
-    .o-app-grid {
-      background-image: none;
-      background-color: #ECEFF1;
-      overflow: hidden;
-
-      .scrollable {
-        overflow-y: auto;
-      }
-
-      .container-grid {
-        height: 100%;
-      }
-
-      .o-app-grid-item {
-        box-shadow: 0 4px 4px #0000001A;
-        height: auto;
-        background: #ffffff;
-        margin: 24px;
-        padding: 16px;
-        cursor: default;
-
-        .github_button {
-          top: 4px;
-        }
-
-        .title {
-          font-size: 20px;
-          color: #1464A5;
-          margin: 12px;
-          font-weight: 600;
-        }
-
-        .o-app-grid-item-image {
-          width: 64px;
-          min-width: auto;
-          max-width: auto;
-          margin: 0 90px;
-          height: auto;
-
-        }
-
-        .link-button {
-          background-color: #B9D1E4;
-          color: #0B488A;
-        }
-      }
-    }
-
-    .background {
-      background-image: url('../assets/images/backgroundv8.png');
-      background-color: #ECEFF1;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-
-
-  &.version15 {
-
-    button,
-    html,
-    input,
-    select,
-    span,
-    textarea {
-      font-family: Poppins, "Helvetica Neue", sans-serif;
-    }
-
-    .mat-toolbar.mat-primary {
-      // background-color: transparent;
-      // color: #707070;
-    }
-
-    .o-app-grid {
-      background-image: none;
-      // background-color: #ECEFF1;
-      overflow: hidden;
-
-      .scrollable {
-        overflow-y: auto;
-      }
-
-      .container-grid {
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.25);
-      }
-
-      .o-app-grid-item {
-        box-shadow: 0 4px 4px #0000001A;
-        height: auto;
-        // background: #ffffff;
-        margin: 24px;
-        padding: 16px;
-        cursor: default;
-
-        .github_button {
-          top: 4px;
-        }
-
-        .title {
-          font-size: 20px;
-          color: #1464A5;
-          margin: 12px;
-          font-weight: 600;
-        }
-
-        .o-app-grid-item-image {
-          width: 64px;
-          min-width: auto;
-          max-width: auto;
-          margin: 0 90px;
-          height: auto;
-
-        }
-
-        .link-button {
-          background-color: #B9D1E4;
-          color: #0B488A;
-        }
-      }
-    }
-
-    .background {
-      background-image: url('../assets/images/backgroundv15.png');
-      // background-color: #ECEFF1;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .o-app-grid {
-    background-image: url('../assets/images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #242424;
-    height: 100%;
-    display: flex;
-    flex: 1 1 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  .version-button {
+    display: inline-flex;
     align-items: center;
-    overflow: auto;
-
-    .o-app-grid-item {
-      height: 10em;
-      background: #ffffff;
-      border-radius: 4px;
-      margin: 8px;
-      cursor: pointer;
-      position: relative;
-
-      .o-app-grid-item-image {
-        height: 7em;
-        min-width: 205px;
-        margin: 14px 15px 0 14px;
-      }
-
-      .github_button {
-        position: absolute;
-        bottom: 4px;
-        right: 4px;
-
-        .mat-icon-button {
-          width: 28px;
-          height: 28px;
-          line-height: 28px;
-
-          .mat-icon {
-            width: 22px;
-            height: 22px;
-          }
-        }
-
-      }
-    }
   }
+
+  .ontimize-icon {
+    height: 25px;
+    width: 21px;
+  }
+
+  .github-icon {
+    font-size: 24px;
+    height: 25px;
+    width: 24px;
+  }
+}
+
+.page {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.footer {
+  height: 56px;
+  color: #ffffff;
+  background-color: #1464A5;
+  font-size: 14px;
+  flex: 0 0 auto;
 }
