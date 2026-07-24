@@ -29,6 +29,21 @@ spec:
                 number: {{ .Values.service.externalPort }}
           path: /()(.*)
           pathType: ImplementationSpecific
+          # 18x demos rewrite rules
+        - backend:
+            service:
+              name: ontimize-web-ngx-quickstart-18x
+              port:
+                number: 41800
+          path: /v18/quickstart(/|$)(.*)
+          pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: ontimize-web-ngx-playground-18x
+              port:
+                number: 41801
+          path: /v18/playground(/|$)(.*)
+          pathType: ImplementationSpecific
           # 15x demos rewrite rules
         - backend:
             service:
