@@ -26,7 +26,7 @@
   {
     "id": "hhrrapp15",
     "title": "HHRR",
-    "img": "hhrrapp.png",
+    "img": "v18/hhrrapp.png",
     "type": "Demo",
     "description": "HR management application based on Ontimize, designed to streamline processes.",
     "icon": "people",
@@ -34,5 +34,30 @@
     "github": "https://github.com/imatia-innovation/hhrrapp",
     "action": "Try demo",
     "version": 15
+  },
+  {
+    "id": "quickstart18",
+    "title": "Quickstart",
+    "img": "v18/quickstart.png",
+    "type": "Demo",
+    "description": "Unified banking platform for managing customers, accounts, and branches.",
+    "icon": "account_balance",
+    "url": "https://try.imatia.com/ontimizeweb/v18/quickstart/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-quickstart",
+    "action": "Try demo",
+    "version": 18
+  },
+  {
+    "id": "hhrrapp18",
+    "title": "HHRR",
+    "img": "v18/hhrrapp.png",
+    "type": "Demo",
+    "description": "Not available yet",
+    "icon": "people",
+    "url": "https://hhrrapp.dev.imatia.cloud/app/main/home",
+    "github": "https://github.com/imatia-innovation/hhrrapp",
+    "action": "Try demo",
+    "hidden": true,
+    "version": 18
   }
 ]

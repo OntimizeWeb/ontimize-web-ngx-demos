@@ -94,5 +94,69 @@
     "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
     "action": "Explore",
     "version": 15
+  },
+  {
+    "id": "playground18",
+    "title": "Playground",
+    "img": "v18/playground.png",
+    "type": "Components",
+    "description": "Interactive space to explore the component library.",
+    "icon": "widgets",
+    "url": "https://try.imatia.com/ontimizeweb/v18/playground/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-playground",
+    "action": "Explore",
+    "version": 18
+  },
+  {
+    "id": "charts18",
+    "title": "Charts",
+    "img": "v18/charts.png",
+    "type": "Components",
+    "description": "Explore different chart types and configurations.",
+    "icon": "bar_chart",
+    "url": "https://try.imatia.com/ontimizeweb/v18/charts/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-charts",
+    "action": "Explore",
+    "hidden": true,
+    "version": 18
+  },
+  {
+    "id": "map18",
+    "title": "Map",
+    "img": "v18/maps.png",
+    "type": "Components",
+    "description": "Examples of maps and geolocation tools.",
+    "icon": "map",
+    "url": "https://try.imatia.com/ontimizeweb/v18/map/",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-ngx-map",
+    "action": "Explore",
+    "hidden": true,
+    "version": 18
+  },
+  {
+    "id": "template18",
+    "title": "Template Manager",
+    "img": "v18/template-manager.png",
+    "type": "Components",
+    "description": "Browse templates with usage examples and code snippets.",
+    "icon": "code",
+    "url": "#",
+    "github": "https://github.com/OntimizeWeb/ontimize-web-template-manager",
+    "action": "Explore",
+    "hidden": true,
+    "version": 18
+  },
+  {
+    "id": "calendario18",
+    "title": "Calendar",
+    "img": "v18/calendar.png",
+    "type": "Components",
+    "description": "Plan and visualize events with the new calendar component.",
+    "icon": "calendar_today",
+    "url": "https://ontimizeweb.github.io/docs/next/extra-components/calendar/overview",
+    "github": "",
+    "action": "Explore",
+    "badge": "NEW",
+    "version": 18
   }
 ]

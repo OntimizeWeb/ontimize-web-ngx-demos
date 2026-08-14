@@ -1,0 +1,46 @@
+<div class="section-v18">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Ontimize Web demos and components</h1>
+      <p>Discover our demos and try Ontimize Web components. Explore how they work and how to integrate them into
+        your projects.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">{{ demos.length }}</span>
+        <span class="stat-label">demos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{{ totalComponents }}</span>
+        <span class="stat-label">components</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">v18</span>
+        <span class="stat-label">latest version</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="demos-section" aria-labelledby="v18-demos-heading">
+    <h2 id="v18-demos-heading" class="section-label">Available demos</h2>
+    <div class="demos-grid">
+      <card-v18 *ngFor="let item of demos" [item]="item"></card-v18>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="featured-col" *ngIf="featuredComponent" aria-labelledby="v18-featured-heading">
+      <div class="section-label-row">
+        <h2 id="v18-featured-heading" class="section-label">Featured updates</h2>
+        <span class="badge-new">NEW</span>
+      </div>
+      <card-v18 [item]="featuredComponent"></card-v18>
+    </div>
+    <div class="components-col" aria-labelledby="v18-components-heading">
+      <h2 id="v18-components-heading" class="section-label">Discover Ontimize components</h2>
+      <div class="components-grid">
+        <card-v18 *ngFor="let item of components" [item]="item"></card-v18>
+      </div>
+    </div>
+  </section>
+</div>
