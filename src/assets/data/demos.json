@@ -26,7 +26,7 @@
   {
     "id": "hhrrapp15",
     "title": "HHRR",
-    "img": "v18/hhrrapp.png",
+    "img": "hhrrapp.png",
     "type": "Demo",
     "description": "HR management application based on Ontimize, designed to streamline processes.",
     "icon": "people",
