@@ -1,0 +1,193 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.card-v18 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+
+  .preview {
+    height: 184px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .preview-placeholder {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      mat-icon {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 12px;
+    padding: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .icon-bg {
+      flex: 0 0 auto;
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      background-color: #1464A51A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        height: 18px;
+        width: 18px;
+        font-size: 18px;
+      }
+    }
+
+    .title {
+      flex: 1 1 auto;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #000000DE;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .github-link {
+      flex: 0 0 auto;
+      display: flex;
+      color: #6B7280;
+
+      .github {
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .content-footer {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 12px;
+  }
+
+  .description {
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000A3;
+  }
+
+  .button-action {
+    align-self: flex-start;
+    border-radius: 33554400px;
+    font-size: 15px;
+    white-space: nowrap;
+
+    mat-icon {
+      vertical-align: middle;
+    }
+  }
+}
+
+.card-v18--featured {
+  .preview {
+    height: 220px;
+  }
+
+  .card-header .title {
+    font-size: 20px;
+  }
+}
+
+.card-v18--demo {
+  .content-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .button-action {
+    align-self: center;
+    flex: 0 0 auto;
+  }
+}
+
+.card-v18--component {
+  .preview {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    .icon-bg {
+      height: 48px;
+      width: 48px;
+      border-radius: 14px;
+
+      .icon {
+        height: 24px;
+        width: 24px;
+        font-size: 24px;
+      }
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #0F1117;
+    }
+
+    .github-link {
+      color: #6B7280;
+
+      .github {
+        height: 26px;
+        width: 26px;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .button-action {
+    align-self: stretch;
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    --mdc-outlined-button-outline-color: #00000042;
+  }
+}
