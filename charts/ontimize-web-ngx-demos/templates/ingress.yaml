@@ -44,6 +44,20 @@ spec:
                 number: 41801
           path: /v18/playground(/|$)(.*)
           pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: ontimize-web-ngx-charts-18x
+              port:
+                number: 41807
+          path: /v18/charts(/|$)(.*)
+          pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: ontimize-web-ngx-map-18x
+              port:
+                number: 41806
+          path: /v18/map(/|$)(.*)
+          pathType: ImplementationSpecific
           # 15x demos rewrite rules
         - backend:
             service:
