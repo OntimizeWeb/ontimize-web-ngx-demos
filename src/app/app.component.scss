@@ -44,4 +44,27 @@
   background-color: #1464A5;
   font-size: 14px;
   flex: 0 0 auto;
+
+  &.footer--v18 {
+    color: #000000A3;
+    background-color: #ffffff;
+    border-top: 1px solid #0000001F;
+  }
+}
+
+.page {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.footer {
+  height: 56px;
+  color: #ffffff;
+  background-color: #1464A5;
+  font-size: 14px;
+  flex: 0 0 auto;
 }

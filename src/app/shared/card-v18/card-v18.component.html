@@ -1,0 +1,43 @@
+<mat-card class="card-v18" [class.card-v18--featured]="item.badge" [class.card-v18--demo]="isDemo"
+  [class.card-v18--component]="!isDemo">
+  <div class="preview" *ngIf="isDemo">
+    <img *ngIf="item.img" [src]="'./assets/images/' + item.img" [alt]="item.title" loading="lazy">
+    <div *ngIf="!item.img" class="preview-placeholder">
+      <mat-icon color="primary">{{ item.icon }}</mat-icon>
+    </div>
+  </div>
+  <mat-card-content>
+    <div class="card-header">
+      <div class="icon-bg">
+        <mat-icon class="icon" color="primary">{{ item.icon }}</mat-icon>
+      </div>
+      <h3 class="title">{{ item.title }}</h3>
+      <a *ngIf="item.github" [href]="item.github" target="_blank" rel="noopener" class="github-link"
+        [attr.aria-label]="'GitHub repository for ' + item.title">
+        <mat-icon class="github" svgIcon="ontimize:github"></mat-icon>
+      </a>
+    </div>
+    <div class="preview" *ngIf="!isDemo">
+      <img *ngIf="item.img" [src]="'./assets/images/' + item.img" [alt]="item.title" loading="lazy">
+      <div *ngIf="!item.img" class="preview-placeholder">
+        <mat-icon color="primary">{{ item.icon }}</mat-icon>
+      </div>
+    </div>
+    <div class="content-footer">
+      <p class="description">{{ item.description }}</p>
+      <a *ngIf="!isDisabled && isDemo" mat-flat-button class="button-action" color="primary" [href]="item.url"
+        target="_blank" rel="noopener">
+        {{ item.action }}
+      </a>
+      <a *ngIf="!isDisabled && !isDemo" mat-stroked-button class="button-action" color="primary" [href]="item.url"
+        target="_blank" rel="noopener">
+        {{ item.action }}
+        <mat-icon>chevron_right</mat-icon>
+      </a>
+      <button *ngIf="isDisabled" mat-stroked-button class="button-action" color="primary" disabled>
+        {{ item.action }}
+        <mat-icon *ngIf="!isDemo">chevron_right</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

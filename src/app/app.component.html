@@ -1,4 +1,5 @@
-<mat-toolbar color="primary" class="toolbar">
+<mat-toolbar [color]="selectedVersion?.version === 18 ? null : 'primary'" class="toolbar"
+  [class.toolbar--v18]="selectedVersion?.version === 18">
   <div fxFlex fxLayoutGap="8px" fxLayoutAlign="start center" class="toolbar-title">
     <img class="ontimize-icon" src="./assets/images/logoGrisNegro.png">
     <span class="title">Ontimize Web</span>
@@ -23,7 +24,8 @@
 <div class="page">
   <section-v8 *ngIf="selectedVersion?.version === 8"></section-v8>
   <section-v15 *ngIf="selectedVersion?.version === 15"></section-v15>
-  <div class="footer" fxLayoutAlign="center center">
+  <section-v18 *ngIf="selectedVersion?.version === 18"></section-v18>
+  <div class="footer" fxLayoutAlign="center center" [class.footer--v18]="selectedVersion?.version === 18">
     <span>© {{currentYear}} Ontimize. All demos and components designed by Ontimize.</span>
   </div>
 </div>
